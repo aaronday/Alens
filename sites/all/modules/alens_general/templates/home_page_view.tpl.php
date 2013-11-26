@@ -101,12 +101,9 @@
             </div>
             <!-- end sq-side-menu -->
 
-
             <!--<div id="logo" class="hidden-xs"><img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/logo.png"/></div>-->
 
-
             <!-- HEADER : STARTS -->
-
 
             <!-- HOME : STARTS -->
             <section id="home" data-stellar-background-ratio="1.7" data-stellar-vertical-offset="0" data-stellar-horizontal-offset="0">
@@ -129,10 +126,10 @@
                         <div class="tile nav-tile tile-01  next-bg-one">
                             <a class="tile-nav scroll-link" href="#about" data-soffset="0">
                                 <div class="nav-hover next-bg-twelve">
-                                    <h5>I am John Doe, the graphic &amp; web designer</h5>
-                                    <p>Learn more about me</p>
+                                    <h5>叫我戴小枫，我是个程序员，但又不止是程序猿</h5>
+                                    <p>想了解我更多？</p>
                                 </div>
-                                <span>About Me</span>
+                                <span>关于我</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/01.png"/>
                             </a>
                         </div>
@@ -151,10 +148,10 @@
                         <div class="tile nav-tile tile-01  next-bg-two">
                             <a class="tile-nav scroll-link" href="#portfolio" data-soffset="0">
                                 <div class="nav-hover next-bg-four">
-                                    <h5>24 Websites / 32 Logos / 11 Illustrations</h5>
-                                    <p>My best works are here</p>
+                                    <h5>10年 / 5大洲 / 28个城市</h5>
+                                    <p>记录，让人看到更多</p>
                                 </div>
-                                <span>My Portfolio</span>
+                                <span>片刻·点滴</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/06.png"/>
                             </a>
                         </div>
@@ -165,12 +162,11 @@
                         </div>
                         <!-- Tile : Ends -->
 
-
                         <!-- Tile : Starts -->
                         <div class="slogan tile-03   text-left">
                             <div class="inner">
-                                <h1>John Doe</h1>
-                                <h3>Creative Portfolio of Web Designer</h3>
+                                <h1>戴小枫</h1>
+                                <h3>A guy who is more than an engineer</h3>
                             </div>
                         </div>
                         <!-- Tile : Ends -->
@@ -179,10 +175,10 @@
                         <div class="tile nav-tile tile-01  next-bg-three">
                             <a class="tile-nav scroll-link" href="#services" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
-                                    <h5>Web Design / Graphic / Logo</h5>
-                                    <p>Have a look on what I do</p>
+                                    <h5>身体和灵魂</h5>
+                                    <p>总该有一个在路上</p>
                                 </div>
-                                <span>My Services</span>
+                                <span>足迹</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/03.png"/>
                             </a>
                         </div>
@@ -210,16 +206,14 @@
                         <div class="tile nav-tile tile-01 next-bg-six">
                             <a class="tile-nav scroll-link" href="single-project.html" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
-                                    <h5>Single Project / Project Listing Page</h5>
-                                    <p>Standalone Page</p>
+                                    <h5>在这里，你将看到</h5>
+                                    <p>精华</p>
                                 </div>
-                                <span>Project Page</span>
+                                <span>画廊</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/02.png"/>
                             </a>
                         </div>
                         <!-- Tile : Ends -->
-
-
 
                         <!-- Tile : Starts -->
                         <div class="tile nav-tile tile-01 next-bg-five">
@@ -228,7 +222,7 @@
                                     <h5>Single profile / Resume page</h5>
                                     <p>Standalone page</p>
                                 </div>
-                                <span>Profile Page</span>
+                                <span>待定</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/04.png"/>
                             </a>
                         </div>
@@ -243,7 +237,6 @@
                         </div>
                         <!-- Tile : Ends -->
 
-
                         <!-- Tile : Starts -->
                         <div class="tile tile-01 thumb">
                             <div class="tile-nav flipY">
@@ -257,10 +250,10 @@
                         <div class="tile nav-tile tile-01 next-bg-eight">
                             <a class="tile-nav scroll-link" href="#contact" data-soffset="0">
                                 <div class="nav-hover next-bg-one">
-                                    <h5>Have a project or message for me?</h5>
-                                    <p>Shoot an email now</p>
+                                    <h5>想和我做基友？</h5>
+                                    <p>给我发email</p>
                                 </div>
-                                <span>Contact Me</span>
+                                <span>联系我</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/05.png"/>
                             </a>
                         </div>
@@ -269,44 +262,40 @@
                     </div>
                     <!-- stripe :ends-->
 
-
                 </section>
             </section>
             <!-- HOME : ENDS -->
 
-
             <!-- ABOUT : STARTS -->
             <section id="about" class="page-section navigation-fadeIn">
-
 
                 <section class="container">
 
                     <div class="row">
                         <article class="col-md-12 text-left">
-                            <h2 class="page-heading">about me</h2>
+                            <h2 class="page-heading">关于我</h2>
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
 
                     <div class="row add-top">
                         <article class="col-md-12 text-left">
-                            <p class="welcome-text fx fx-rollIn">I am John, a young web designer who focuses on crafting experiences and interfaces to make products easier to use.</p>
+                            <p class="welcome-text fx fx-rollIn">我叫戴小枫，在一家IT公司做着俗称“码农”的工作，每日朝九晚五的生活严重缺乏趣味。幸好自己还有一个爱好——摄影。我的愿望就是成为会写程序的人里的最能拍照的。</p>
                         </article>
                     </div>
 
-
                     <div class="row add-top">
                         <article class="col-md-3 col-xs-6 text-center skill-wrap">
-                            <div class="chart1" data-percent="86">86%<span>Photshop</span></div>
+                            <div class="chart1" data-percent="86">86%<span>码代码</span></div>
                         </article>
                         <article class="col-md-3 col-xs-6 text-center skill-wrap">
-                            <div class="chart2" data-percent="94">94%<span>PHP</span></div>
+                            <div class="chart2" data-percent="54">54%<span>摄影</span></div>
                         </article>
                         <article class="col-md-3  col-xs-6 text-center skill-wrap">
-                            <div class="chart3" data-percent="79">79%<span>HTML5</span></div>
+                            <div class="chart3" data-percent="79">79%<span>装傻</span></div>
                         </article>
                         <article class="col-md-3  col-xs-6 text-center skill-wrap">
-                            <div class="chart4" data-percent="88">88%<span>CorelDraw</span></div>
+                            <div class="chart4" data-percent="88">88%<span>卖萌</span></div>
                         </article>
                     </div>
 
@@ -317,11 +306,10 @@
                         </article>
                         <article class="col-md-7 col-xs-6 mob-hor-full text-left">
                             <ul class="be-social">
-                                <li><a href="#"><span class="next-bg-eight">Follow my tweets on Twitter</span></a></li>
-                                <li><a href="#"><span class="next-bg-two">Browse my recent Dribbble shots</span></a></li>
-                                <li><a href="#"><span class="next-bg-three">Read my personal blog posts</span></a></li>
+                                <li><a href="#"><span class="next-bg-eight">微博求关注</span></a></li>
+                                <li><a href="#"><span class="next-bg-two">来豆瓣找我吧</span></a></li>
+                                <li><a href="#"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
                                 <li><a href="#"><span class="next-bg-four">Connect me via Facebook</span></a></li>
-                                <li><a href="single-project.html"><span class="next-bg-five">Explore my projects</span></a></li>
                             </ul>
                         </article>
                     </div>
@@ -332,10 +320,8 @@
             </section>
             <!-- ABOUT : ENDS -->
 
-
             <!-- QUOTES : STARTS -->
             <section id="testimonials" class="page-section next-bg-one">
-
 
                 <section class="container">
 
@@ -371,20 +357,11 @@
                         <!-- span : ends -->
                     </div>
 
-
-
                 </section>
                 <!-- container:ends -->
 
-
             </section>
             <!-- QUOTES : ENDS -->
-
-
-
-
-
-
 
             <!-- PORTFOLIO : STARTS -->
             <section id="portfolio" class="page-section">
@@ -403,9 +380,6 @@
                             <p class="welcome-text welcome-text-alt fx fx-bounceIn">I have worked for more than 50 clients over last 2 years. Explore my best works here</p>
                         </article>
                     </div>
-
-
-
 
                     <div class="row next-bg-eleven common-pad">
 
@@ -437,13 +411,8 @@
                         </article>
                     </div>
 
-
                     <div class="row">
                         <section id="portfolio-wrap" class="clearfix">
-
-
-
-
 
                             <!-- Thumbnails -->
                             <div id="portfolio_thumbs" class="fx fx-slideInLeft">
@@ -617,13 +586,9 @@
                                             <p><span>youtube</span></p>
                                         </div>
                                     </li>
-
-
                                 </ul>
-
                             </div>
                             <!-- End: Thumbnails -->
-
 
                         </section>  
                     </div>
@@ -632,11 +597,9 @@
             </section>
             <!-- PORTFOLIO : ENDS -->
 
-
             <!-- FLICKR : STARTS -->
             <section id="flickr-panel" class="page-section next-bg-twelve">
                 <section class="container fx fx-flipInX">
-
 
                     <div class="row">
                         <article class="text-left">
@@ -655,19 +618,12 @@
                         <!-- span : ends -->
                     </div>
 
-
-
-
                 </section>
             </section>
             <!-- FLICKR : ENDS -->
 
-
-
-
             <!-- SERVICES : STARTS -->
             <section id="services" class="page-section next-bg-four">
-
 
                 <section class="container">
 
@@ -739,7 +695,6 @@
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
                                             </div>
                                             <!--  service-info:ends -->
-
 
                                         </div>
                                         <!-- service-content : ends -->
@@ -854,7 +809,6 @@
                                             </div>
                                             <!--  service-info:ends -->
 
-
                                         </div>
                                         <!-- service-content : ends -->
                                     </div>
@@ -911,7 +865,6 @@
                                             </div>
                                             <!--  service-info:ends -->
 
-
                                         </div>
                                         <!-- service-content : ends -->
                                     </div>
@@ -967,7 +920,6 @@
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
                                             </div>
                                             <!--  service-info:ends -->
-
 
                                         </div>
                                         <!-- service-content : ends -->
@@ -1043,11 +995,8 @@
                 </section>
                 <!-- container:ends -->
 
-
-
             </section>
             <!-- SERVICES : ENDS -->
-
 
             <!-- CONTACT : STARTS -->
             <section id="contact" class="page-section" >
@@ -1109,14 +1058,11 @@
 
                 </section> 
 
-
-
             </section>
             <!-- CONTACT : ENDS -->
 
             <!-- ADDRESS-PANEL : STARTS -->
             <section id="address-panel" class="page-section">
-
 
                 <section class="container">
 
@@ -1159,10 +1105,8 @@
             </section>
             <!-- ADDRESS-PANEL   : ENDS -->
 
-
             <!-- TWEET-FEED : STARTS -->
             <section id="tweet-feed" class="page-section">
-
 
                 <section class="container">
 
@@ -1183,7 +1127,6 @@
 
             </section>
             <!-- TWEET-FEED  : ENDS -->
-
 
             <!-- FOOTER : STARTS -->
             <footer id="mastfoot">
@@ -1241,15 +1184,10 @@
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/slidingmenu.js"></script>
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/script.js"></script>
 
-
         <script>
             $(function() {
                 Boxgrid.init();
             });
-        </script>
-
-        <script>
-
         </script>
 
         <script>

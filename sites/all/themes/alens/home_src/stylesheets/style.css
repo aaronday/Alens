@@ -59,17 +59,17 @@ p{
     font-size: 14px;
     line-height: 21px;
     color: #555;
-font-family:"Open_Sans_R";
-font-weight: normal;
+    font-family:"Open_Sans_R";
+    font-weight: normal;
 }
 .inner-heading{
     font-size: 24px;
     line-height: 31px;
     color: #111;
-font-family:"Open_Sans_B";
-    
-font-weight: bold;
-margin-bottom: 10px;
+    font-family:"Open_Sans_B";
+
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 .common-pad{
     padding: 0px 30px;
@@ -216,30 +216,30 @@ margin-bottom: 10px;
 
 
 #preloader  {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: #eee;
-     z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    z-index: 9999;
     height: 100%;
     width: 100%;
- }
+}
 
 #status  {
-     width: 100px;
-     height: 100px;
-     border-radius: 100px;
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     background-color: #fafafa;
-     background-image: url(../images/loader.gif);
-     background-repeat: no-repeat;
-     background-position: center;
-     margin: -50px 0 0 -50px;
- }
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fafafa;
+    background-image: url(../images/loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -50px 0 0 -50px;
+}
 
 
 /* ===================================*/
@@ -273,7 +273,7 @@ margin-bottom: 10px;
     font-size: 24px;
     line-height: 31px;
     font-family: "Open_Sans_B";
-    
+
     color: #000;
     font-weight: normal;
     margin-left: 10px;
@@ -296,7 +296,7 @@ margin-bottom: 10px;
     background: #6B253B;
     color: #fff;
     font-weight: normal;
-font-family:"Open_Sans_L";
+    font-family:"Open_Sans_L";
     padding: 5px 10px;
 }
 
@@ -332,19 +332,19 @@ font-family:"Open_Sans_L";
     color: #444;
     font-size: 36px;
     line-height: 43px;
-font-family:"Open_Sans_B";
-    
-font-weight: bold;
+    font-family:"YueGo_R";
+
+    font-weight: bold;
 }
 .page-heading-alt{
     color: #fff;
 }
 
 .welcome-text{
-    font-size: 62px;
+    font-size: 50px;
     line-height: 69px;
-font-family:"Open_Sans_L";
-    
+    font-family:"YueGo_EL";
+
     font-weight: 200;
     color: #999;
 }
@@ -377,7 +377,7 @@ font-family:"Open_Sans_L";
 
 
 #welcome{
-   background: url('../images/bg/04.jpg') center center repeat;
+    background: url('../images/bg/04.jpg') center center repeat;
     background-size: cover;
 }
 #welcome h1{
@@ -397,56 +397,56 @@ font-family:"Open_Sans_L";
     margin-top: 0px;
 }
 #news_ticker {
-height: 240px;
-overflow: hidden;
-padding: 3px;
-position: relative;
+    height: 240px;
+    overflow: hidden;
+    padding: 3px;
+    position: relative;
 }
 .ticker-list{
-float: left;
-padding: 0px;
-list-style: none;
--webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
--moz-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
--ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    float: left;
+    padding: 0px;
+    list-style: none;
+    -webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    -moz-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    -ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
 }
 .ticker-list:hover {
--webkit-animation-play-state: paused;
--moz-animation-play-state: paused;
--ms-animation-play-state: paused;
-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
 }
 .ticker-list li {line-height: 220px;}
 #news_ticker a {
-color: #121212;
-text-decoration: none;
-font-size: 130px;
+    color: #121212;
+    text-decoration: none;
+    font-size: 130px;
 }
- 
+
 @-webkit-keyframes ticker {
-0% {margin-top: 0;}
+    0% {margin-top: 0;}
 25% {margin-top: -260px;}
 50% {margin-top: -520px;}
 75% {margin-top: -780px;}
 100% {margin-top: 0;}
 }
 @-moz-keyframes ticker {
-0% {margin-top: 0;}
+    0% {margin-top: 0;}
 25% {margin-top: -260px;}
 50% {margin-top: -520px;}
 75% {margin-top: -780px;}
 100% {margin-top: 0;}
 }
 @-ms-keyframes ticker {
-0% {margin-top: 0;}
+    0% {margin-top: 0;}
 25% {margin-top: -260px;}
 50% {margin-top: -520px;}
 75% {margin-top: -780px;}
 100% {margin-top: 0;}
 }
 @keyframes ticker {
-0% {margin-top: 0;}
+    0% {margin-top: 0;}
 25% {margin-top: -260px;}
 50% {margin-top: -520px;}
 75% {margin-top: -780px;}
@@ -475,7 +475,7 @@ font-size: 130px;
 }
 .team-stuff a > h3{
     font-family: "Open_Sans_L";
-    
+
     font-size: 18px;
     line-height: 25px;
     padding: 10px;
@@ -483,7 +483,7 @@ font-size: 130px;
 }
 .team-stuff a > h5{
     font-family: "Open_Sans_L";
-    
+
     font-size: 14px;
     line-height: 21px;
     padding: 10px;
@@ -501,7 +501,7 @@ font-size: 130px;
 .be-social li a > span {
     color: #FFFFFF;
     font-family: "Open_Sans_L";
-    
+
     font-size: 18px;
     line-height: 28px;
     padding: 18px; border: 0 none;
@@ -518,8 +518,8 @@ font-size: 130px;
 .skill-wrap{
     font-size: 28px;
     line-height: 35px;
-font-family:"Open_Sans_B";
-margin-bottom: 30px;
+    font-family:"Open_Sans_B";
+    margin-bottom: 30px;
 }
 .skill-wrap > div{
     min-height: 140px;
@@ -528,8 +528,8 @@ margin-bottom: 30px;
     display: block;
     font-size: 18px;
     line-height: 30px;
-font-family:"Open_Sans_L";
-margin-top: 10px;
+    font-family:"YueGo_EL";
+    margin-top: 10px;
 }
 }
 
@@ -608,7 +608,7 @@ ul#portfolioFilter li a {
     font-size: 16px;
     color: #fff;
     font-family: "Open_Sans_B";
-    
+
 }
 
 
@@ -685,7 +685,7 @@ div#portfolio_thumbs ul li div.item_info h3 a > span{
     line-height: 25px;
     color: #FFF;
     font-family: "Open_Sans_B";
-    
+
 }
 div#portfolio_thumbs ul li div.item_info p > span{
     padding: 4px 8px;
@@ -693,7 +693,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
     line-height: 21px;
     color: #fff;
     font-family: "Open_Sans_L";
-    
+
     background: #000;
 }
 
@@ -709,7 +709,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
 }
 
 #item_content {
-   /* width: 680px;*/
+    /* width: 680px;*/
     margin: 0;
     margin-top: 50px;
 }
@@ -727,7 +727,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
     line-height: 55px;
     color: #FFF;
     font-family:"Open_Sans_B";
-    
+
     font-weight: normal;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -742,7 +742,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
 
 /* Slider */
 #item_slider {
-/*    width: 680px;*/
+    /*    width: 680px;*/
     margin: 0;
     padding: 0;
     margin-top: 20px;
@@ -792,7 +792,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
     text-indent: 1px;
     font-size: 15px;
     font-family: "Open_Sans_L";
-    
+
     text-align: center;
 }
 
@@ -839,7 +839,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
 
 /* Control buttons */
 #control_buttons {
-/*    width: 680px;*/
+    /*    width: 680px;*/
     background: rgba(0,0,0,0.2);
     padding: 15px 8px 5px 8px;
 }
@@ -856,7 +856,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
     background: #493D1B;
     font-size: 15px;
     font-family: "Open_Sans_L";
-    
+
     color: #FFF;
     text-align: center;
 }
@@ -914,7 +914,7 @@ div#portfolio_thumbs ul li div.item_info p > span{
     color: #777;
     font-size: 14px;
     line-height: 21px;
-font-family:"Open_Sans_R";
+    font-family:"Open_Sans_R";
 }
 .service-thumb{
     opacity: 0.1;
@@ -953,17 +953,17 @@ font-family:"Open_Sans_R";
     font-weight: normal;
     font-size: 20px !important;
     line-height: 31px !important;
-font-family:"Open_Sans_L";
-margin-bottom: 10px;
-background: rgba(0,0,0,0.2);
-padding: 5px 10px;
+    font-family:"Open_Sans_L";
+    margin-bottom: 10px;
+    background: rgba(0,0,0,0.2);
+    padding: 5px 10px;
 }
 .service-info > p{
     margin-top: 20px;
     color: #fff;
     font-size: 14px;
     line-height: 21px;
-font-family:"Open_Sans_R";
+    font-family:"Open_Sans_R";
 }
 
 
@@ -1323,7 +1323,7 @@ fieldset h1 {
 /* =====================================================*/
 /*Retina BG Image Triggering*/
 @media screen and (min-device-pixel-ratio: 2) {
-   
+
     /*High resolution BG images on parallax layers*/
     #home {
         background: url('../images/bg/01@2x.jpg') center center repeat;
@@ -1351,7 +1351,7 @@ fieldset h1 {
         background-size: cover;
     }
 
-   
+
 }
 
 
@@ -1375,13 +1375,13 @@ fieldset h1 {
     {
         width:960px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1401,13 +1401,13 @@ fieldset h1 {
     {
         width:960px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1430,13 +1430,13 @@ fieldset h1 {
     {
         width:960px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1460,13 +1460,13 @@ fieldset h1 {
     {
         width:960px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1490,13 +1490,13 @@ fieldset h1 {
     {
         width:960px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1519,13 +1519,13 @@ fieldset h1 {
     {
         width:900px;
     }
-     #metro-panel
+    #metro-panel
     {
         width:1200px !important;
         margin-left: auto;
         margin-right: auto;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
@@ -1550,16 +1550,16 @@ fieldset h1 {
     .flickr-thumb{
         width: 25%;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 32px !important;
         line-height: 41px !important;
     }
 
-     #sidebar-nav, .sq-side-menu ul li, .sq-side-menu .first, .sq-side-menu .second{
+    #sidebar-nav, .sq-side-menu ul li, .sq-side-menu .first, .sq-side-menu .second{
         width: 100px;
     }
     .sq-side-menu ul li:hover .second .content, .sq-active .second .content { 
-    font-size: 18px !important;
+        font-size: 18px !important;
     }
     .rb-grid li,
     .rb-grid li.rb-span-2,
@@ -1568,7 +1568,7 @@ fieldset h1 {
         height: 14em;
         text-align: left;
     }
-       .container {
+    .container {
         padding-left: 30px !important;
         padding-right: 30px !important;
     }
@@ -1576,7 +1576,7 @@ fieldset h1 {
     {
         width:900px;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:72px !important;
     }
 }
@@ -1669,11 +1669,11 @@ fieldset h1 {
     .flickr-thumb{
         width: 20%;
     }
-     #sidebar-nav, .sq-side-menu ul li, .sq-side-menu .first, .sq-side-menu .second{
+    #sidebar-nav, .sq-side-menu ul li, .sq-side-menu .first, .sq-side-menu .second{
         width: 100px;
     }
     .sq-side-menu ul li:hover .second .content, .sq-active .second .content { 
-    font-size: 18px !important;
+        font-size: 18px !important;
     }
     .rb-grid li,
     .rb-grid li.rb-span-2,
@@ -1714,19 +1714,19 @@ fieldset h1 {
         width: 700px !important;
     }
     #item_video_wrapper{
-    width: 700px !important;
+        width: 700px !important;
     }
-      .transparent{
+    .transparent{
         display: none;
     }
     #metro-panel{
         width: 81%;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 24px !important;
         line-height: 31px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:64px !important;
     }
 }
@@ -1813,7 +1813,7 @@ fieldset h1 {
         width: 100px;
     }
     .sq-side-menu ul li:hover .second .content, .sq-active .second .content { 
-    font-size: 18px !important;
+        font-size: 18px !important;
     }
     .rb-grid li,
     .rb-grid li.rb-span-2,
@@ -1853,17 +1853,17 @@ fieldset h1 {
         width: 580px !important;
     }
     #item_video_wrapper{
-    width: 580px !important;
+        width: 580px !important;
     }
 
-      .transparent{
+    .transparent{
         display: none;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 24px !important;
         line-height: 31px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:48px !important;
     }
 }
@@ -1871,7 +1871,7 @@ fieldset h1 {
 
 /*Tablets*/
 
-    /*following lines are newly  added on v1.2 - Nov 06, 2013*/
+/*following lines are newly  added on v1.2 - Nov 06, 2013*/
 @media (max-width: 800px) {
     body, html {
         max-width: 800px !important;
@@ -1939,7 +1939,7 @@ fieldset h1 {
     .be-social{
         text-align: left;
     }
-     #item_content {
+    #item_content {
         width: 470px !important;
     }
 
@@ -1990,15 +1990,15 @@ fieldset h1 {
         float: none;
         margin-top: 20px;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 24px !important;
         line-height: 31px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:36px !important;
     }
 }
-  /*addon styles : end*/
+/*addon styles : end*/
 
 
 @media (max-width: 768px) {
@@ -2013,7 +2013,7 @@ fieldset h1 {
         padding-left: 140px !important;
         padding-right: 140px !important;
     }
- 
+
 
     .text-left, .text-right {
         text-align: center;
@@ -2071,7 +2071,7 @@ fieldset h1 {
     .be-social{
         text-align: left;
     }
-     #item_content {
+    #item_content {
         width: 440px !important;
     }
 
@@ -2122,11 +2122,11 @@ fieldset h1 {
         float: none;
         margin-top: 20px;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 24px !important;
         line-height: 31px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:36px !important;
     }
 }
@@ -2182,7 +2182,7 @@ fieldset h1 {
     }
 
     #item_video_wrapper{
-    width: 520px !important;
+        width: 520px !important;
     }
     #item_slider .flex-direction-nav li a {
         top: 180px !important;
@@ -2231,13 +2231,13 @@ fieldset h1 {
         text-align: left;
     }
     .welcome-text, .tweet_list li, #ticker .loading {
-    font-size: 48px;
-    line-height: 55px;
+        font-size: 48px;
+        line-height: 55px;
     }
     .mob-hor-full{
         width: 100%;
     }
-    
+
     .transparent, .slogan{
         display: none;
     }
@@ -2250,11 +2250,11 @@ fieldset h1 {
     .team-stuff.mob-hor-full{
         width: 33%;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 28px !important;
         line-height: 35px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:32px !important;
     }
 }
@@ -2311,7 +2311,7 @@ fieldset h1 {
     }
 
     #item_video_wrapper{
-    width: 490px !important;
+        width: 490px !important;
     }
     #item_slider .flex-direction-nav li a {
         top: 180px !important;
@@ -2360,13 +2360,13 @@ fieldset h1 {
         text-align: left;
     }
     .welcome-text, .tweet_list li, #ticker .loading {
-    font-size: 48px;
-    line-height: 55px;
+        font-size: 48px;
+        line-height: 55px;
     }
     .mob-hor-full{
         width: 100%;
     }
-    
+
     .transparent, .slogan{
         display: none;
     }
@@ -2379,15 +2379,15 @@ fieldset h1 {
     .team-stuff.mob-hor-full{
         width: 33%;
     }
-      .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 28px !important;
         line-height: 35px !important;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:32px !important;
     }
 }
-    /*addon styles : end*/
+/*addon styles : end*/
 
 @media (max-width: 480px) {
     body, html {
@@ -2409,7 +2409,7 @@ fieldset h1 {
         display: none;
     }
 
-    
+
 
     .liner {
         width: 100%;
@@ -2462,7 +2462,7 @@ fieldset h1 {
     }
 
     #item_video_wrapper{
-    width: 370px !important;
+        width: 370px !important;
     }
     #item_slider .flex-direction-nav li a {
         top: 90px !important;
@@ -2472,7 +2472,7 @@ fieldset h1 {
         margin-top: 30px;
     }
 
-        .tweet_list li, .tweet_list li a {
+    .tweet_list li, .tweet_list li a {
         font-size: 28px !important;
         line-height: 35px !important;
     }
@@ -2504,8 +2504,8 @@ fieldset h1 {
         text-align: left;
     }
     .welcome-text, .tweet_list li, #ticker .loading {
-    font-size: 36px;
-    line-height: 43px;
+        font-size: 36px;
+        line-height: 43px;
     }
     .mob-hor-full, .team-stuff.mob-hor-full{
         width: 100%;
@@ -2525,12 +2525,12 @@ fieldset h1 {
         margin-top: 20px;
     }
     .fx, .animated{
-    opacity: 1 !important;
+        opacity: 1 !important;
     }
     #news_ticker a{
         font-size: 72px;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:24px !important;
     }
 }
@@ -2559,7 +2559,7 @@ fieldset h1 {
         display: none;
     }
 
-    
+
 
     .liner {
         width: 100%;
@@ -2612,7 +2612,7 @@ fieldset h1 {
     }
 
     #item_video_wrapper{
-    width: 250px !important;
+        width: 250px !important;
     }
     #item_slider .flex-direction-nav li a {
         top: 90px !important;
@@ -2654,19 +2654,19 @@ fieldset h1 {
         text-align: left;
     }
     .welcome-text, .tweet_list li, #ticker .loading {
-    font-size: 24px;
-    line-height: 31px;
+        font-size: 24px;
+        line-height: 31px;
     }
     .mob-hor-full, .team-stuff.mob-hor-full{
         width: 100%;
     }
     .be-social li a > span,    .be-social li a > span:hover{
         font-size: 14px;
-    -moz-transition:  none !important;
-    -webkit-transition:  none !important;
-    -o-transition:  none !important;
-    transition: none !important;
-    padding: 20px !important;
+        -moz-transition:  none !important;
+        -webkit-transition:  none !important;
+        -o-transition:  none !important;
+        transition: none !important;
+        padding: 20px !important;
     }
     .cbp-qtrotator img{
         margin-bottom: 20px;
@@ -2674,11 +2674,11 @@ fieldset h1 {
         float: none !important;
     }
     .service-info > p {
-    color: #FFFFFF;
-    font-family: "Open_Sans_R";
-    font-size: 10px;
-    line-height: 17px;
-    margin-top: 20px;
+        color: #FFFFFF;
+        font-family: "Open_Sans_R";
+        font-size: 10px;
+        line-height: 17px;
+        margin-top: 20px;
     }
     .foot-icons ul li{
         margin-top: 20px;
@@ -2690,7 +2690,7 @@ fieldset h1 {
     #metro-panel{
         width: 98%;
     }
-      .skill-wrap > div{
+    .skill-wrap > div{
         margin-top: 30px;
     }
     .tile-01{
@@ -2698,29 +2698,29 @@ fieldset h1 {
         height: 161px;
     }
     #metro-panel .tile-nav .nav-hover > h5 {
-    color: #FFFFFF;
-    
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 21px;
-    padding: 10px;
-    text-align: left;
+        color: #FFFFFF;
+
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 21px;
+        padding: 10px;
+        text-align: left;
     }
     #metro-panel .tile-nav span {
-    display: block;
-    
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 18px;
-    margin-bottom: 10px;
-    margin-top: 28px;
+        display: block;
+
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 18px;
+        margin-bottom: 10px;
+        margin-top: 28px;
     }
     #metro-panel .tile-nav .nav-hover > p{
         text-align: left !important;
         padding-left: 10px !important;
     }
     .fx, .animated{
-    opacity: 1 !important;
+        opacity: 1 !important;
     }
     #news_ticker a{
         font-size: 64px;
@@ -2731,7 +2731,7 @@ fieldset h1 {
     .cbp-qtrotator .cbp-qtcontent img{
         margin-left: 30px;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:20px !important;
     }
 }
@@ -2756,7 +2756,7 @@ fieldset h1 {
         display: none;
     }
 
-    
+
 
     .liner {
         width: 100%;
@@ -2809,7 +2809,7 @@ fieldset h1 {
     }
 
     #item_video_wrapper{
-    width: 230px !important;
+        width: 230px !important;
     }
     #item_slider .flex-direction-nav li a {
         top: 90px !important;
@@ -2851,19 +2851,19 @@ fieldset h1 {
         text-align: left;
     }
     .welcome-text, .tweet_list li, #ticker .loading {
-    font-size: 24px;
-    line-height: 31px;
+        font-size: 24px;
+        line-height: 31px;
     }
     .mob-hor-full, .team-stuff.mob-hor-full{
         width: 100%;
     }
     .be-social li a > span,    .be-social li a > span:hover{
         font-size: 14px;
-    -moz-transition:  none !important;
-    -webkit-transition:  none !important;
-    -o-transition:  none !important;
-    transition: none !important;
-    padding: 20px !important;
+        -moz-transition:  none !important;
+        -webkit-transition:  none !important;
+        -o-transition:  none !important;
+        transition: none !important;
+        padding: 20px !important;
     }
     .cbp-qtrotator img{
         margin-bottom: 20px;
@@ -2871,17 +2871,17 @@ fieldset h1 {
         float: none !important;
     }
     .service-info > p {
-    color: #FFFFFF;
-    font-family: "Open_Sans_R";
-    font-size: 10px;
-    line-height: 17px;
-    margin-top: 20px;
+        color: #FFFFFF;
+        font-family: "Open_Sans_R";
+        font-size: 10px;
+        line-height: 17px;
+        margin-top: 20px;
     }
     .foot-icons ul li{
         margin-top: 20px;
         float: none;
     }
-      .transparent, .slogan{
+    .transparent, .slogan{
         display: none;
     }
     #metro-panel{
@@ -2892,22 +2892,22 @@ fieldset h1 {
         height: 141px;
     }
     #metro-panel .tile-nav .nav-hover > h5 {
-    color: #FFFFFF;
-    
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 19px;
-    padding: 10px;
-    text-align: left;
+        color: #FFFFFF;
+
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 19px;
+        padding: 10px;
+        text-align: left;
     }
     #metro-panel .tile-nav span {
-    display: block;
-    
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 18px;
-    margin-bottom: 10px;
-    margin-top: 28px;
+        display: block;
+
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 18px;
+        margin-bottom: 10px;
+        margin-top: 28px;
     }
     #metro-panel .tile-nav .nav-hover > p{
         text-align: left !important;
@@ -2920,7 +2920,7 @@ fieldset h1 {
         height: 72px;
     }
     .fx, .animated{
-    opacity: 1 !important;
+        opacity: 1 !important;
     }
     #news_ticker a{
         font-size: 48px;
@@ -2934,7 +2934,7 @@ fieldset h1 {
     .cbp-qtrotator .cbp-qtcontent img{
         margin-left: 30px;
     }
-     .rb-week span {
+    .rb-week span {
         font-size:20px !important;
     }
 }

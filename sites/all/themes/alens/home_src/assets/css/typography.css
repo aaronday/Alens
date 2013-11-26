@@ -29,3 +29,39 @@ url('fonts/open_sans/OpenSans-Light-webfont.woff') format('woff'),
 url('fonts/open_sans/OpenSans-Light-webfont.ttf') format('truetype'), 
 url('fonts/open_sans/OpenSans-Light-webfont.svg#webfont') format('svg'); 
 }
+@font-face{ 
+font-family:"YueGo_EL";
+src: url('fonts/YueGo/RTWSYueGoTrial-ExLight.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_ELC";
+src: url('fonts/YueGo/RTWSYueGoTrial-ExLightCom.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_ELCD";
+src: url('fonts/YueGo/RTWSYueGoTrial-ExLightCond.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_L";
+src: url('fonts/YueGo/RTWSYueGoTrial-Light.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_LC";
+src: url('fonts/YueGo/RTWSYueGoTrial-LightCond.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_R";
+src: url('fonts/YueGo/RTWSYueGoTrial-Regular.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_UL";
+src: url('fonts/YueGo/RTWSYueGoTrial-UltLight.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_ULC";
+src: url('fonts/YueGo/RTWSYueGoTrial-UltLightCom.otf'); 
+}
+@font-face{ 
+font-family:"YueGo_ULCD";
+src: url('fonts/YueGo/RTWSYueGoTrial-UltLightCond.otf'); 
+}
