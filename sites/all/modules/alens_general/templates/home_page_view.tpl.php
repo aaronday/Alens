@@ -306,14 +306,13 @@
                         </article>
                         <article class="col-md-7 col-xs-6 mob-hor-full text-left">
                             <ul class="be-social">
-                                <li><a href="#"><span class="next-bg-eight">微博求关注</span></a></li>
-                                <li><a href="#"><span class="next-bg-two">来豆瓣找我吧</span></a></li>
+                                <li><a href="#"><span class="next-bg-eight be-social-chinese">微博求关注</span></a></li>
+                                <li><a href="#"><span class="next-bg-two be-social-chinese">来豆瓣找我吧</span></a></li>
                                 <li><a href="#"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
                                 <li><a href="#"><span class="next-bg-four">Connect me via Facebook</span></a></li>
                             </ul>
                         </article>
                     </div>
-
 
                 </section>
 
