@@ -1,0 +1,23 @@
+<?php
+
+function alens_general_menu() {
+    $items['home'] = array(
+        'title' => 'Home page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'home_page_display',
+        'page arguments' => array(),
+        'access callback' => TRUE,
+        'file' => 'alens_general.inc',
+    );
+    return $items;
+}
+
+function alens_general_theme() {
+    $themes['home_page_view'] = array(
+        'path' => drupal_get_path('module', 'alens_general') . '/templates',
+        'template' => 'home_page_view',
+    );
+    return $themes;
+}
+
+?>

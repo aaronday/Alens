@@ -1,0 +1,11 @@
+name = alens_general
+description = General module for Alens
+package = Alens
+core = 7.x
+
+; Information added by drupal.org packaging script on 2013-11-26
+version = "7.x-1.x"
+core = "7.x"
+project = "alens"
+datestamp = "1365037010"
+
