@@ -9,6 +9,16 @@ function alens_general_menu() {
         'access callback' => TRUE,
         'file' => 'alens_general.inc',
     );
+    
+    $items['gallery/%'] = array(
+        'title' => 'Gallery page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'gallery_page_display',
+        'page arguments' => array(1),
+        'access callback' => TRUE,
+        'file' => 'alens_general.inc',
+    );
+    
     return $items;
 }
 
@@ -16,6 +26,10 @@ function alens_general_theme() {
     $themes['home_page_view'] = array(
         'path' => drupal_get_path('module', 'alens_general') . '/templates',
         'template' => 'home_page_view',
+    );
+    $themes['gallery_page_view'] = array(
+        'path' => drupal_get_path('module', 'alens_general') . '/templates',
+        'template' => 'gallery_page_view',
     );
     return $themes;
 }
