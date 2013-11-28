@@ -72,8 +72,8 @@
                 <i class="icon-remove menu-close"></i>
                 <a class="scroll-link"  data-soffset="0" href="#intro">Home</a>
                 <a class="scroll-link"  data-soffset="0" href="#about">About</a>
-                <a class="scroll-link"  data-soffset="0" href="#portfolio">Portfolio</a>
-                <a class="scroll-link"  data-soffset="0" href="#services">Services</a>
+                <a class="scroll-link"  data-soffset="0" href="#works">Portfolio</a>
+                <a class="scroll-link"  data-soffset="0" href="#footprints">Services</a>
                 <a class="scroll-link"  data-soffset="0" href="#contact">Contact</a>
                 <a href="single-profile.html">Profile Page</a>
                 <a href="single-project.html">Project Page</a>
@@ -94,7 +94,7 @@
             <div id="sidebar-nav" class="sq-side-menu hidden-xs">
                 <ul>
                     <!-- Starting : Nav Block -->
-                    <?php print $navi_blocks;?>
+                    <?php print $navi_blocks; ?>
                     <!-- Ending : Nav Block -->
                 </ul>
                 <!-- end sq-side-menu ul -->
@@ -146,7 +146,7 @@
 
                         <!-- Tile : Starts -->
                         <div class="tile nav-tile tile-01  next-bg-two">
-                            <a class="tile-nav scroll-link" href="#portfolio" data-soffset="0">
+                            <a class="tile-nav scroll-link" href="#works" data-soffset="0">
                                 <div class="nav-hover next-bg-four">
                                     <h5>10年 / 5大洲 / 28个城市</h5>
                                     <p>记录，让人看到更多</p>
@@ -173,7 +173,7 @@
 
                         <!-- Tile : Starts -->
                         <div class="tile nav-tile tile-01  next-bg-three">
-                            <a class="tile-nav scroll-link" href="#services" data-soffset="0">
+                            <a class="tile-nav scroll-link" href="#footprints" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
                                     <h5>身体和灵魂</h5>
                                     <p>总该有一个在路上</p>
@@ -273,14 +273,14 @@
 
                     <div class="row">
                         <article class="col-md-12 text-left">
-                            <h2 class="page-heading">关于我</h2>
+                            <h2 class="page-heading"><?php $titles = _define_titles(); print $titles[0];?></h2>
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
 
                     <div class="row add-top">
                         <article class="col-md-12 text-left">
-                            <p class="welcome-text fx fx-rollIn">我叫戴小枫，在一家IT公司做着俗称“码农”的工作，每日朝九晚五的生活严重缺乏趣味。幸好自己还有一个爱好——摄影。我的愿望就是成为会写程序的人里的最能拍照的。</p>
+                            <p class="welcome-text fx fx-rollIn"><?php $descriptions = _define_descriptions(); print $descriptions[0];?></p>
                         </article>
                     </div>
 
@@ -320,6 +320,7 @@
             <!-- ABOUT : ENDS -->
 
             <!-- QUOTES : STARTS -->
+            <!--
             <section id="testimonials" class="page-section next-bg-one">
 
                 <section class="container">
@@ -353,40 +354,37 @@
                             </div>
 
                         </article>
-                        <!-- span : ends -->
                     </div>
 
                 </section>
-                <!-- container:ends -->
 
-            </section>
+            </section>-->
             <!-- QUOTES : ENDS -->
 
             <!-- PORTFOLIO : STARTS -->
-            <section id="portfolio" class="page-section">
+            <section id="works" class="page-section">
 
                 <section class="container">
 
                     <div class="row">
                         <article class="col-md-12 text-left">
-                            <h2 class="page-heading page-heading-alt">my portfolio</h2>
+                            <h2 class="page-heading page-heading-alt"><?php $titles = _define_titles(); print $titles[1];?></h2>
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
 
                     <div class="row add-top add-bottom">
                         <article class="col-md-12 text-left">
-                            <p class="welcome-text welcome-text-alt fx fx-bounceIn">I have worked for more than 50 clients over last 2 years. Explore my best works here</p>
+                            <p class="welcome-text welcome-text-alt fx fx-bounceIn"><?php $descriptions = _define_descriptions(); print $descriptions[1];?></p>
                         </article>
                     </div>
 
+                    <!--
                     <div class="row next-bg-eleven common-pad">
 
                         <article class="text-left ">
-                            <!-- Container element for a single portfolio item. Do not remove! -->
                             <div id="item_container" class="clearfix"></div>
 
-                            <!-- Filter -->
                             <div id="filter" class="clearfix">
                                 <div id="filter_wrapper">
                                     <ul id="portfolioFilter">
@@ -406,9 +404,9 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End: Filter -->
                         </article>
                     </div>
+                    -->
 
                     <div class="row">
                         <section id="portfolio-wrap" class="clearfix">
@@ -417,174 +415,7 @@
                             <div id="portfolio_thumbs" class="fx fx-slideInLeft">
 
                                 <ul class="sortablePortfolio clearfix">
-
-                                    <!-- 1st thumb -->
-                                    <li data-type="category1" class="simple-bg-one">
-                                        <!-- Thumbnail -->
-                                        <a href="photo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio1.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio1_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="photo_item.htm" class="more_info"><span class="next-bg-one">Project TItle</span></a></h3>
-                                            <p><span>image slider</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 2nd thumb -->
-                                    <li data-type="category2" class="simple-bg-two">
-                                        <!-- Thumbnail -->
-                                        <a href="youtube_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio2.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio2_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="youtube_item.htm" class="more_info"><span class="next-bg-two">Project TItle</span></a></h3>
-                                            <p><span>youtube</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 3rd thumb -->
-                                    <li data-type="category3" class="simple-bg-three">
-                                        <!-- Thumbnail -->
-                                        <a href="vimeo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio3.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio3_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="vimeo_item.htm" class="more_info"><span class="next-bg-three">Project TItle</span></a></h3>
-                                            <p><span>vimeo</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 4th thumb -->
-                                    <li data-type="category1" class="simple-bg-four">
-                                        <!-- Thumbnail -->
-                                        <a href="photo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio4.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio4_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="photo_item.htm" class="more_info"><span class="next-bg-four">Project TItle</span></a></h3>
-                                            <p><span>image slider</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 5th thumb -->
-                                    <li data-type="category4" class="simple-bg-five">
-                                        <!-- Thumbnail -->
-                                        <a href="<?php echo $theme_path; ?>/home_src/images/portfolio_zoom/01.jpg" data-gal="prettyPhoto[gallery]">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio5.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio5_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="<?php echo $theme_path; ?>/home_src/images/portfolio_zoom/01.jpg" data-gal="prettyPhoto[gallery]"><span class="next-bg-five">Project TItle</span></a></h3>
-                                            <p><span>lightbox image</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 6th thumb -->
-                                    <li data-type="category2" class="simple-bg-six">
-                                        <!-- Thumbnail -->
-                                        <a href="youtube_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio6.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio6_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="youtube_item.htm" class="more_info"><span class="next-bg-six">Project TItle</span></a></h3>
-                                            <p><span>youtube</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 7th thumb -->
-                                    <li data-type="category5" class="simple-bg-seven">
-                                        <!-- Thumbnail -->
-                                        <a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" data-gal="prettyPhoto[gallery]">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio7.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio7_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="http://www.youtube.com/watch?v=1iIZeIy7TqM" data-gal="prettyPhoto[gallery]"><span class="next-bg-seven">Project TItle</span></a></h3>
-                                            <p><span>lightbox video</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 8th thumb -->
-                                    <li data-type="category1" class="simple-bg-eight">
-                                        <!-- Thumbnail -->
-                                        <a href="photo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio8.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio8_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="photo_item.htm" class="more_info"><span class="next-bg-eight">Project TItle</span></a></h3>
-                                            <p><span>photography</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 9th thumb -->
-                                    <li data-type="category3" class="simple-bg-one">
-                                        <!-- Thumbnail -->
-                                        <a href="vimeo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio9.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio9_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="vimeo_item.htm" class="more_info"><span class="next-bg-nine">Project TItle</span></a></h3>
-                                            <p><span>vimeo</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 10th thumb -->
-                                    <li data-type="category2" class="simple-bg-two">
-                                        <!-- Thumbnail -->
-                                        <a href="youtube_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio10.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio10_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="youtube_item.htm" class="more_info"><span class="next-bg-ten">Project TItle</span></a></h3>
-                                            <p><span>youtube</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 11th thumb -->
-                                    <li data-type="category1" class="simple-bg-three">
-                                        <!-- Thumbnail -->
-                                        <a href="photo_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio11.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio11_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="photo_item.htm" class="more_info"><span class="next-bg-eleven">Project TItle</span></a></h3>
-                                            <p><span>photography</span></p>
-                                        </div>
-                                    </li>
-
-                                    <!-- 12th thumb -->
-                                    <li data-type="category2" class="simple-bg-four">
-                                        <!-- Thumbnail -->
-                                        <a href="youtube_item.htm" class="more_info">
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio12.jpg"/>
-                                            <img alt="simple" title="simple" src="<?php echo $theme_path; ?>/home_src/images/portfolio_thumbs/portfolio12_rollover.jpg" class="rollover" />
-                                        </a>
-                                        <!-- Info -->
-                                        <div class="item_info">
-                                            <h3><a href="youtube_item.htm" class="more_info"><span class="next-bg-twelve">Project TItle</span></a></h3>
-                                            <p><span>youtube</span></p>
-                                        </div>
-                                    </li>
+                                    <?php print $works_map; ?>
                                 </ul>
                             </div>
                             <!-- End: Thumbnails -->
@@ -596,7 +427,7 @@
             </section>
             <!-- PORTFOLIO : ENDS -->
 
-            <!-- FLICKR : STARTS -->
+            <!-- FLICKR : STARTS
             <section id="flickr-panel" class="page-section next-bg-twelve">
                 <section class="container fx fx-flipInX">
 
@@ -609,33 +440,30 @@
 
                     <div class="row add-top">
                         <article class="text-left">
-                            <!-- FLICKR FEED : STARTS -->
                             <ul id="flickr" class="feed clearfix"></ul>
-                            <!-- FLICKR FEED : ENDS-->
 
                         </article>
-                        <!-- span : ends -->
                     </div>
 
                 </section>
             </section>
-            <!-- FLICKR : ENDS -->
+            FLICKR : ENDS -->
 
             <!-- SERVICES : STARTS -->
-            <section id="services" class="page-section next-bg-four">
+            <section id="footprints" class="page-section next-bg-four">
 
                 <section class="container">
 
                     <div class="row">
                         <article class="col-md-12 text-left">
-                            <h2 class="page-heading page-heading-alt">my services</h2>
+                            <h2 class="page-heading page-heading-alt"><?php $titles = _define_titles(); print $titles[2];?></h2>
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
 
                     <div class="row add-top add-bottom">
                         <article class="col-md-12 text-left">
-                            <p class="welcome-text welcome-text-alt fx fx-slideInRight">I offer premium services, I can produce quality websites, designs, apps and artworks</p>
+                            <p class="welcome-text welcome-text-alt fx fx-slideInRight"><?php $descriptions = _define_descriptions(); print $descriptions[2];?></p>
                         </article>
                     </div>
 
@@ -643,348 +471,7 @@
                         <article class="col-md-12">
 
                             <ul id="rb-grid" class="rb-grid clearfix">
-
-                                <li class="rb-span-2 next-bg-one">
-                                    <h3>Web Design</h3><span class="rb-temp">HTML5 / CSS3/ JS</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/01.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-
-
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-one">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>Web Design</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-01" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">HTML5 / CSS3/ JS</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
-                                <li class="next-bg-two">
-                                    <h3>Print Design</h3><span class="rb-temp">Photoshop</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/02.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-two">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>Print Design</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-02" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">Photoshop</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
-                                <li class="next-bg-three">
-                                    <h3>Logo Brand</h3><span class="rb-temp">CorelDraw</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/03.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-three">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>Logo Brand</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-03" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">CorelDraw</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
-                                <li class="rb-span-4 next-bg-six">
-                                    <h3>CMS Site</h3><span class="rb-temp">PHP / WordPress / Joomla</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/04.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-six">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>CMS Site</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-04" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">PHP / WordPress / Joomla</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
-                                <li class="rb-span-2 next-bg-five">
-                                    <h3>Web Apps</h3><span class="rb-temp">Python / RoR</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/05.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-five">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>Web Apps</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-05" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">Python / RoR</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
-                                <li class="rb-span-2 next-bg-eight">
-                                    <h3>Mobile Apps</h3><span class="rb-temp">iOS / Android</span>
-                                    <img alt="" title="" class="service-thumb" src="<?php echo $theme_path; ?>/home_src/images/services/06.png"/>
-                                    <div class="rb-overlay">
-                                        <span class="rb-close">close</span>
-
-                                        <!-- service-content : starts -->
-                                        <div class="rb-week clearfix next-bg-eight">
-
-                                            <!-- service-matter : starts -->
-                                            <div class="service-matter">
-                                                <span>Mobile Apps</span>
-
-                                                <!-- carousel : starts -->
-                                                <div id="service-carousel-06" class="carousel slide">
-
-                                                    <!-- Wrapper for slides -->
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/01.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/02.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                        <div class="item">
-                                                            <img alt="" title="" class="service-spec-img" src="<?php echo $theme_path; ?>/home_src/images/services/specs/03.jpg"/>
-                                                            <div class="carousel-caption"></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!-- Wrapper for slides : ends -->
-                                                </div>
-                                                <!-- carousel : ends -->
-
-                                            </div>
-                                            <!-- service-matter : ends -->
-
-                                            <!--  service-info:starts -->
-                                            <div class="service-info">
-                                                <h5 class="service-spec">iOS / Android</h5>
-                                                <h3>Service Overview</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. Sed volutpat tincidunt lorem, sed suscipit lacus lacinia at. Phasellus vel nulla scelerisque, viverra mi at, adipiscing est. Nullam porttitor turpis vel tellus rutrum porta. Cras sit amet varius nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra. Suspendisse sed erat sit amet sem interdum mollis. </p>
-                                            </div>
-                                            <!--  service-info:ends -->
-
-
-                                        </div>
-                                        <!-- service-content : ends -->
-                                    </div>
-                                    <!-- rb : ends -->
-
-                                </li>
-
+                                <?php print $footprints_map;?>
                             </ul>
 
                         </article>
@@ -1005,14 +492,14 @@
 
                     <div class="row">
                         <article class="col-md-12 text-left">
-                            <h2 class="page-heading page-heading-alt">contact me</h2>
+                            <h2 class="page-heading page-heading-alt"><?php $titles = _define_titles(); print $titles[3];?></h2>
                             <div class="liner"><span></span></div>
                         </article>
                     </div>
 
                     <div class="row add-top add-bottom">
                         <article class="col-md-12 text-left">
-                            <p class="welcome-text welcome-text-alt fx fx-slideInDown">I will reply to each and every email. If you have projects feel free to call me anytime</p>
+                            <p class="welcome-text welcome-text-alt fx fx-slideInDown"><?php $descriptions = _define_descriptions(); print $descriptions[3];?></p>
                         </article>
                     </div>
 
@@ -1060,7 +547,7 @@
             </section>
             <!-- CONTACT : ENDS -->
 
-            <!-- ADDRESS-PANEL : STARTS -->
+            <!-- ADDRESS-PANEL : STARTS 
             <section id="address-panel" class="page-section">
 
                 <section class="container">
@@ -1102,9 +589,9 @@
                 </section> 
 
             </section>
-            <!-- ADDRESS-PANEL   : ENDS -->
+            ADDRESS-PANEL   : ENDS -->
 
-            <!-- TWEET-FEED : STARTS -->
+            <!-- TWEET-FEED : STARTS 
             <section id="tweet-feed" class="page-section">
 
                 <section class="container">
@@ -1125,7 +612,7 @@
                 </section> 
 
             </section>
-            <!-- TWEET-FEED  : ENDS -->
+             TWEET-FEED  : ENDS -->
 
             <!-- FOOTER : STARTS -->
             <footer id="mastfoot">

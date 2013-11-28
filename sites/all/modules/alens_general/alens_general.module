@@ -20,4 +20,21 @@ function alens_general_theme() {
     return $themes;
 }
 
+function _define_menu() {
+    $menu_arr = array('home', 'about', 'works', 'footprints', 'contact');
+    return $menu_arr;
+}
+
+function _define_titles() {
+    $title_arr = array('关于我', '我的作品', '我的足迹', '联系我');
+    return $title_arr;
+}
+
+function _define_descriptions() {
+    $description_arr = array('我叫戴小枫，在一家IT公司做着俗称“码农”的工作，每日朝九晚五的生活严重缺乏趣味。幸好自己还有一个爱好——摄影。我的愿望就是成为会写程序的人里的最能拍照的。', 
+                                    '圣奥古斯丁说：世界就像一本书,不去旅行的人只读到了其中的一页。而我觉得：用心观察，我们就能在身边发现足以让自己惊叹的人与景。善于发现，然后记录；不然走得再远，也不过是原地踏步。', 
+                                    '曾今，有一个人，一份约定，一段旅程。只是如今，人已去，情已了。只能，整理背包，独自上路。', '联系我');
+    return $description_arr;
+}
+
 ?>

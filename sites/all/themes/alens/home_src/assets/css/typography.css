@@ -30,7 +30,7 @@ url('fonts/open_sans/OpenSans-Light-webfont.ttf') format('truetype'),
 url('fonts/open_sans/OpenSans-Light-webfont.svg#webfont') format('svg'); 
 }
 @font-face{ 
-font-family:"YueGo_EL";
+    font-family:"YueGo_EL";
 src: url('fonts/YueGo/RTWSYueGoTrial-ExLight.otf'); 
 }
 @font-face{ 
