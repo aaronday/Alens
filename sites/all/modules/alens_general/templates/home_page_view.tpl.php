@@ -166,7 +166,7 @@
                         <div class="slogan tile-03   text-left">
                             <div class="inner">
                                 <h1>戴小枫</h1>
-                                <h3>A guy who is more than an engineer</h3>
+                                <h3>More than an engineer......</h3>
                             </div>
                         </div>
                         <!-- Tile : Ends -->

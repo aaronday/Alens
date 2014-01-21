@@ -9,9 +9,15 @@ function home_page_display() {
     return $page_content;
 }
 
-function gallery_page_display($topic_id) {
+function gallery_page_display() {
     $gallery_images = _generate_gallery_images();
     $page_content = theme('gallery_page_view', array('gallery_images' => $gallery_images));
+    return $page_content;
+}
+
+function photo_page_display() {
+    $photo_images = _generate_photo_images();
+    $page_content = theme('photo_page_view', array('photo_images' => $photo_images));
     return $page_content;
 }
 
@@ -103,6 +109,14 @@ function _generate_gallery_images($topic_id) {
     $page_content = '';
     for ($i = 1; $i < 10; $i++) {
         $page_content .= '{image: "' . base_path() . 'sites/default/files/images/' . $i . '.jpg", title: "Image Credit: Maria Kazvan", thumb: "' . base_path() . 'sites/default/files/images/' . $i . '.jpg", url: "#"},';
+    }
+    return $page_content;
+}
+
+function _generate_photo_images() {
+    $page_content = '';
+    for ($i = 1; $i < 10; $i++) {
+        $page_content .= '<section><img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" /></section>';
     }
     return $page_content;
 }
