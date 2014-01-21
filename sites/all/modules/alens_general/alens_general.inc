@@ -116,7 +116,11 @@ function _generate_gallery_images($topic_id) {
 function _generate_photo_images() {
     $page_content = '';
     for ($i = 1; $i < 10; $i++) {
-        $page_content .= '<section><img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" /></section>';
+        $page_content .= '<section>';
+        $page_content .= '<div style="float: left;"><img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" /></div>';
+        $page_content .= '<div style="float: left; width: 200px; height: 500px; background: white;"></div>';
+        $page_content .= '<div style="clear: both;"></div>';
+        $page_content .= '</section>';
     }
     return $page_content;
 }
