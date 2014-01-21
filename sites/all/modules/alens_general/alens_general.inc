@@ -68,7 +68,7 @@ function _generate_works_map() {
 function _generate_footprints_map() {
     $theme_path = base_path() . drupal_get_path('theme', 'alens');
 
-    $notes_num = 11;
+    $notes_num = 4;
     $items_layout_arr = _random_line_items();
     $total_item_num = 0;
 
@@ -117,9 +117,7 @@ function _generate_photo_images() {
     $page_content = '';
     for ($i = 1; $i < 10; $i++) {
         $page_content .= '<section>';
-        $page_content .= '<div style="float: left;"><img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" /></div>';
-        $page_content .= '<div style="float: left; width: 200px; height: 500px; background: white;"></div>';
-        $page_content .= '<div style="clear: both;"></div>';
+        $page_content .= '<img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" />';
         $page_content .= '</section>';
     }
     return $page_content;

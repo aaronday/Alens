@@ -75,8 +75,6 @@
                 <a class="scroll-link"  data-soffset="0" href="#works">Portfolio</a>
                 <a class="scroll-link"  data-soffset="0" href="#footprints">Services</a>
                 <a class="scroll-link"  data-soffset="0" href="#contact">Contact</a>
-                <a href="single-profile.html">Profile Page</a>
-                <a href="single-project.html">Project Page</a>
             </div>
             <!-- Navigation Trigger Button -->
             <div id="sm-trigger"></div>
@@ -166,7 +164,7 @@
                         <div class="slogan tile-03   text-left">
                             <div class="inner">
                                 <h1>戴小枫</h1>
-                                <h3>More than an engineer......</h3>
+                                <h3>More than an engineer...</h3>
                             </div>
                         </div>
                         <!-- Tile : Ends -->
