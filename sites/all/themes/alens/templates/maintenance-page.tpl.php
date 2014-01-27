@@ -22,10 +22,12 @@
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 
-  <div id="skip-link">
+  <!--
+    <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   </div>
-
+  -->
+  
   <div id="page-wrapper"><div id="page">
 
     <div id="header"><div class="section clearfix">

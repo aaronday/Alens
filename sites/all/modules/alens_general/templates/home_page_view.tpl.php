@@ -74,8 +74,8 @@
                 <i class="icon-remove menu-close"></i>
                 <a class="scroll-link"  data-soffset="0" href="#intro">Home</a>
                 <a class="scroll-link"  data-soffset="0" href="#about">About</a>
-                <a class="scroll-link"  data-soffset="0" href="#works">Portfolio</a>
-                <a class="scroll-link"  data-soffset="0" href="#footprints">Services</a>
+                <a class="scroll-link"  data-soffset="0" href="#works">Works</a>
+                <a class="scroll-link"  data-soffset="0" href="#footprints">Footprints</a>
                 <a class="scroll-link"  data-soffset="0" href="#contact">Contact</a>
             </div>
             <!-- Navigation Trigger Button -->

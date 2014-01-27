@@ -47,7 +47,7 @@
             <input type="hidden" name="footprintid" value="<?php print $page['content']['system_main']['main']['#markup']; ?>" id="footprintid">
         </div>
         <div style="position: absolute; left: 1050px; top: 50px; cursor: pointer;" onclick="go_mc_home();">
-            <img src="/alens/<?php echo drupal_get_path('theme', 'alens') ?>/images/MB_0006_back.png" width="50px" height="50px"/>
+            <img src="/alens/<?php echo drupal_get_path('theme', 'alens') ?>/mc_src/images/MB_0006_back.png" width="50px" height="50px"/>
         </div>
         <script>
 	$('.jqte-test').jqte();
