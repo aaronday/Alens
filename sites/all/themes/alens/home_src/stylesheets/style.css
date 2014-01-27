@@ -648,8 +648,10 @@ div#portfolio_thumbs ul li:hover {
 }
 
 div#portfolio_thumbs ul li img {
-    width: 100%;
-    height: auto;
+/*    width: 100%;
+    height: auto;*/
+    width: 300px;
+    height: 300px;
     display: block;
     border-radius: 50%;
 }
@@ -660,6 +662,8 @@ div#portfolio_thumbs ul li img.rollover {
     filter: alpha(opacity = 0);
     top: 0px;
     left: 0px;
+    width: 310px;
+    height: 310px;
 }
 
 div#portfolio_thumbs ul li div.item_info {
@@ -687,7 +691,7 @@ div#portfolio_thumbs ul li div.item_info h3 a > span{
     font-size: 18px;
     line-height: 25px;
     color: #FFF;
-    font-family: "Open_Sans_B";
+    font-family: "YueGo_L";
 
 }
 div#portfolio_thumbs ul li div.item_info p > span{

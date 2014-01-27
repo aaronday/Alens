@@ -3,12 +3,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <!--
         <title>NEXT - Easy to use Portfolio - Retina Ready and Responsive HTML5 Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="next by Designova - An easy to use Personal Portfolio - Retina Ready and Responsive HTML5 theme">
         <meta name="author" content="Designova">
+        -->
 
-        <link rel="shortcut icon" href="<?php echo $theme_path; ?>/home_src/assets/ico/favicon.ico">
+        <!--<link rel="shortcut icon" href="<?php echo $theme_path; ?>/home_src/assets/ico/favicon.ico">--> 
         <!-- Standard iPhone Touch Icon--> 
         <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-touch-icon-57-precomposed" />
         <!-- Retina iPhone Touch Icon--> 
@@ -124,10 +126,10 @@
                         <div class="tile nav-tile tile-01  next-bg-one">
                             <a class="tile-nav scroll-link" href="#about" data-soffset="0">
                                 <div class="nav-hover next-bg-twelve">
-                                    <h5>叫我戴小枫，我是个程序员，但又不止是程序猿</h5>
-                                    <p>想了解我更多？</p>
+                                    <h5>Call me Aaron! I am a software engineer</h5>
+                                    <p>learn more about me</p>
                                 </div>
-                                <span>关于我</span>
+                                <span>About me</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/01.png"/>
                             </a>
                         </div>
@@ -146,11 +148,11 @@
                         <div class="tile nav-tile tile-01  next-bg-two">
                             <a class="tile-nav scroll-link" href="#works" data-soffset="0">
                                 <div class="nav-hover next-bg-four">
-                                    <h5>10年 / 5大洲 / 28个城市</h5>
-                                    <p>记录，让人看到更多</p>
+                                    <h5>Take photos around the world</h5>
+                                    <p>To record, make me see more</p>
                                 </div>
-                                <span>片刻·点滴</span>
-                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/06.png"/>
+                                <span>Record</span>
+                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/02.png"/>
                             </a>
                         </div>
                         <!-- Tile : Ends -->
@@ -163,7 +165,7 @@
                         <!-- Tile : Starts -->
                         <div class="slogan tile-03   text-left">
                             <div class="inner">
-                                <h1>戴小枫</h1>
+                                <h1>Aaron Dai</h1>
                                 <h3>More than an engineer...</h3>
                             </div>
                         </div>
@@ -173,11 +175,11 @@
                         <div class="tile nav-tile tile-01  next-bg-three">
                             <a class="tile-nav scroll-link" href="#footprints" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
-                                    <h5>身体和灵魂</h5>
-                                    <p>总该有一个在路上</p>
+                                    <h5>Reading or travelling</h5>
+                                    <p>either your body or soul must be on the way</p>
                                 </div>
-                                <span>足迹</span>
-                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/03.png"/>
+                                <span>Footprint</span>
+                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/04.png"/>
                             </a>
                         </div>
                         <!-- Tile : Ends -->
@@ -199,29 +201,25 @@
                             </div>
                         </div>
                         <!-- Tile : Ends -->
-
+                        
+                        <!-- Tile : Starts -->
+                        <div class="tile tile-01 thumb">
+                            <div class="tile-nav flipX">
+                                <img alt="" title="" class="img1" src="<?php echo $theme_path; ?>/home_src/images/tiles/02a.jpg">
+                                <img alt="" title="" class="img2" src="<?php echo $theme_path; ?>/home_src/images/tiles/02b.jpg">
+                            </div>
+                        </div>
+                        <!-- Tile : Ends -->
+                        
                         <!-- Tile : Starts -->
                         <div class="tile nav-tile tile-01 next-bg-six">
                             <a class="tile-nav scroll-link" href="single-project.html" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
-                                    <h5>在这里，你将看到</h5>
-                                    <p>精华</p>
+                                    <h5>My favorite compositions</h5>
+                                    <p></p>
                                 </div>
-                                <span>画廊</span>
-                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/02.png"/>
-                            </a>
-                        </div>
-                        <!-- Tile : Ends -->
-
-                        <!-- Tile : Starts -->
-                        <div class="tile nav-tile tile-01 next-bg-five">
-                            <a href="single-profile.html" class="tile-nav">
-                                <div class="nav-hover next-bg-ten">
-                                    <h5>Single profile / Resume page</h5>
-                                    <p>Standalone page</p>
-                                </div>
-                                <span>待定</span>
-                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/04.png"/>
+                                <span>Gallery</span>
+                                <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/06.png"/>
                             </a>
                         </div>
                         <!-- Tile : Ends -->
@@ -248,10 +246,10 @@
                         <div class="tile nav-tile tile-01 next-bg-eight">
                             <a class="tile-nav scroll-link" href="#contact" data-soffset="0">
                                 <div class="nav-hover next-bg-one">
-                                    <h5>想和我做基友？</h5>
-                                    <p>给我发email</p>
+                                    <h5>Wanna be my friend?</h5>
+                                    <p>Just send me the email without hesitation!</p>
                                 </div>
-                                <span>联系我</span>
+                                <span>Contact me</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/05.png"/>
                             </a>
                         </div>

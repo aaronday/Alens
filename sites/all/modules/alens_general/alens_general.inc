@@ -15,9 +15,15 @@ function gallery_page_display() {
     return $page_content;
 }
 
-function photo_page_display() {
-    $photo_images = _generate_photo_images();
+function photo_page_display($topic_id) {
+    $photo_images = _generate_photo_images($topic_id);
     $page_content = theme('photo_page_view', array('photo_images' => $photo_images));
+    return $page_content;
+}
+
+function topic_page_display($topic_id) {
+    $topic_images = _generate_topic_images($topic_id);
+    $page_content = theme('topic_page_view', array('topic_images' => $topic_images));
     return $page_content;
 }
 
@@ -49,18 +55,19 @@ function _generate_works_map() {
     $theme_path = base_path() . drupal_get_path('theme', 'alens');
 
     $page_content = '';
-    for ($i = 1; $i < 13; $i++) {
-        $page_content .= '<li data-type="category' . $i . '" class="simple-bg-one">';
-        $page_content .= '<a href="photo_item.htm" class="more_info">';
-        $page_content .= '<img alt="simple" title="simple" src="' . $theme_path . '/home_src/images/portfolio_thumbs/portfolio' . $i . '.jpg"/>';
-        $page_content .= '<img alt="simple" title="simple" src="' . $theme_path . '/home_src/images/portfolio_thumbs/portfolio' . $i . '_rollover.jpg" class="rollover" />';
-        $page_content .= '</a>';
-        $page_content .= '<div class="item_info">';
-        $page_content .= '<h3><a href="#" class="more_info"><span class="next-bg-' . $i . '">Project TItle</span></a></h3>';
-        $page_content .= '<p><span>image slider</span></p>';
-        $page_content .= '</div>';
-        $page_content .= '</li>';
-    }
+    $page_content .= _generate_topic_cover_image($theme_path);
+//    for ($i = 1; $i < 6; $i++) {
+//        $page_content .= '<li data-type="category' . $i . '" class="simple-bg-one">';
+//        $page_content .= '<a href="photo_item.htm" class="more_info">';
+//        $page_content .= '<img alt="simple" title="simple" src="' . $theme_path . '/home_src/images/portfolio_thumbs/portfolio' . $i . '.jpg"/>';
+//        $page_content .= '<img alt="simple" title="simple" src="' . $theme_path . '/home_src/images/portfolio_thumbs/portfolio' . $i . '_rollover.jpg" class="rollover" />';
+//        $page_content .= '</a>';
+//        $page_content .= '<div class="item_info">';
+//        $page_content .= '<h3><a href="#" class="more_info"><span class="next-bg-' . $i . '">Project TItle</span></a></h3>';
+//        $page_content .= '<p><span>image slider</span></p>';
+//        $page_content .= '</div>';
+//        $page_content .= '</li>';
+//    }
 
     return $page_content;
 }
@@ -113,13 +120,20 @@ function _generate_gallery_images($topic_id) {
     return $page_content;
 }
 
-function _generate_photo_images() {
+function _generate_topic_images($topic_id) {
     $page_content = '';
-    for ($i = 1; $i < 10; $i++) {
-        $page_content .= '<section>';
-        $page_content .= '<img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" />';
-        $page_content .= '</section>';
-    }
+    $page_content .= _generate_topic_images_content($topic_id);
+    return $page_content;
+}
+
+function _generate_photo_images($topic_id) {
+    $page_content = '';
+    $page_content .= _generate_photo_images_content($topic_id);
+//    for ($i = 1; $i < 10; $i++) {
+//        $page_content .= '<section>';
+//        $page_content .= '<img src="' . base_path() . 'sites/default/files/images/' . $i . '.jpg" />';
+//        $page_content .= '</section>';
+//    }
     return $page_content;
 }
 
@@ -141,6 +155,64 @@ function _random_line_items() {
         $items_layout_arr = array('', '', '', '');
     }
     return $items_layout_arr;
+}
+
+function _generate_topic_cover_image($theme_path) {
+    $page_content = '';
+    $topics = _get_topics();
+    foreach ($topics as $key => $topic) {
+        $image = _get_topic_cover_images($topic->id);
+        $i = $key + 1;
+        $page_content .= '<li data-type="category' . $i . '" class="simple-bg-one">';
+        $page_content .= '<a target="_blank" href="./topic/' . $topic->id . '" class="">';
+        $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="origin"/>';
+        $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="rollover" />';
+        $page_content .= '</a>';
+        $page_content .= '<div class="item_info">';
+        $page_content .= '<h3><a target="_blank" href="./topic/' . $topic->id . '" class=""><span class="next-bg-' . $i . '">'.$topic->name.'</span></a></h3>';
+        $page_content .= '<p><span>image slider</span></p>';
+        $page_content .= '</div>';
+        $page_content .= '</li>';
+    }
+    return $page_content;
+}
+
+function _get_topics() {
+    $results = db_select('topics', 't')->fields('t')->execute()->fetchAll();
+    return $results;
+}
+
+function _get_topic_cover_images($topic_id) {
+    $results = db_select('managed_images', 'mi')->fields('mi')->condition('mi.topic', $topic_id)->execute()->fetchAll();
+    foreach ($results as $result) {
+        return $result;
+    }
+}
+
+
+function _generate_photo_images_content($topic_id) {
+    $page_content = '';
+    $images = _get_topic_images($topic_id);
+    foreach ($images as $key => $image) {
+        $page_content .= '<section>';
+        $page_content .= '<img src="' . $image->url . '" />';
+        $page_content .= '</section>';
+    }
+    return $page_content;
+}
+
+function _generate_topic_images_content($topic_id){
+    $page_content = '';
+    $images = _get_topic_images($topic_id);
+    foreach ($images as $key => $image) {
+        $page_content .= '<img src="' . $image->url . '">';
+    }
+    return $page_content;
+}
+
+function _get_topic_images($topic_id) {
+    $results = db_select('managed_images', 'mi')->fields('mi')->condition('mi.topic', $topic_id)->execute()->fetchAll();
+    return $results;
 }
 
 ?>

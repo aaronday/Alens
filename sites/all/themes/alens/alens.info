@@ -31,6 +31,8 @@ regions[login_block] = Login in
 settings[shortcut_module_link] = 0
 
 
+stylesheets[all][] = colors/colors.css
+
 ; Information added by drupal.org packaging script on 2013-11-26
 version = "7.24"
 project = "alens"

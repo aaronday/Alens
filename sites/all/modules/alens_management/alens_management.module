@@ -1,0 +1,190 @@
+<?php
+
+function alens_management_permission() {
+    return array(
+        'access to management center' => array(
+            'title' => t('Access to management center'),
+        ),
+    );
+}
+
+
+function alens_management_menu() {
+    $items['mc'] = array(
+        'title' => 'Management center home page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'management_center_home_page_display',
+        'page arguments' => array(),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/login'] = array(
+        'title' => 'Management center login page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'management_center_login_page_display',
+        'page arguments' => array(),
+        'access callback' => TRUE,
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/topic/upload/%'] = array(
+        'title' => 'Management center topic upload page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'management_center_topic_upload_page_display',
+        'page arguments' => array(3),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/imagewall/upload/%'] = array(
+        'title' => 'Management center imagewall upload page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'management_center_imagewall_upload_page_display',
+        'page arguments' => array(3),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/footprint/edit/%'] = array(
+        'title' => 'Management center foot print edit page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'management_center_footprint_edit_page_display',
+        'page arguments' => array(3),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/generatetopicid'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'generate_topic_id',
+        'page arguments' => array(),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/generatefootprintid'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'generate_footprint_id',
+        'page arguments' => array(),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/savetopicname/%/%/%'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'save_topic_name',
+        'page arguments' => array(2, 3, 4),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/savefootprint/%'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'save_footprint',
+        'page arguments' => array(2),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/all/topic'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'all_topic',
+        'page arguments' => array(),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    $items['mc/all/footprint'] = array(
+        'title' => '',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'all_footprint',
+        'page arguments' => array(),
+        'access callback' => 'user_access',
+        'access arguments' => array('access to management center'),
+        'file' => 'alens_management.inc',
+    );
+    
+    return $items;
+}
+
+function alens_management_user_login_block() {
+    $form['#action'] = url(current_path(), array('query' => drupal_get_destination(), 'external' => FALSE));
+    $form['#id'] = 'user-login-form';
+    $form['#validate'] = user_login_default_validators();
+    $form['#submit'][] = 'user_login_submit';
+    $form['name'] = array('#type' => 'textfield',
+        '#title' => t('Username'),
+        '#maxlength' => USERNAME_MAX_LENGTH,
+        '#size' => 15,
+        '#required' => TRUE,
+    );
+    $form['pass'] = array('#type' => 'password',
+        '#title' => t('Password'),
+        '#size' => 15,
+        '#required' => TRUE,
+    );
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = array('#type' => 'submit',
+        '#value' => t('Log in'),
+    );
+    $items = array();
+//    if (variable_get('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)) {
+//        $items[] = l(t('Create new account'), 'user/register', array('attributes' => array('title' => t('Create a new user account.'))));
+//    }
+//    $items[] = l(t('Request new password'), 'user/password', array('attributes' => array('title' => t('Request new password via e-mail.'))));
+    $form['links'] = array('#markup' => theme('item_list', array('items' => $items)));
+    return $form;
+}
+
+function _get_topic_name($topic_id){
+    $query = db_select('topics','t');
+    $query->fields('t');
+    $query->condition('t.id', $topic_id);
+    $result = $query->execute()->fetchObject();
+    $name = $result->name;
+    return $name;
+}
+
+function _get_topic_description($topic_id){
+    $query = db_select('topics','t');
+    $query->fields('t');
+    $query->condition('t.id', $topic_id);
+    $result = $query->execute()->fetchObject();
+    $description = $result->description;
+    return $description;
+}
+
+function _get_footprint_title($fp_id){
+    $query = db_select('footprints','fp');
+    $query->fields('fp');
+    $query->condition('fp.id', $fp_id);
+    $result = $query->execute()->fetchObject();
+    $title = $result->title;
+    return $title;
+}
+
+function _get_footprint_body($fp_id){
+    $query = db_select('footprints','fp');
+    $query->fields('fp');
+    $query->condition('fp.id', $fp_id);
+    $result = $query->execute()->fetchObject();
+    $body = $result->body;
+    return $body;
+}
+
+?>
