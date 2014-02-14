@@ -200,7 +200,7 @@ function _get_all_footprint() {
 
 function _strip_string($string) {
     $string = strip_tags($string);
-    $string = substr($string, 0, 150);
+    $string = mb_substr($string, 0, 70);
     return $string . '……';
 }
 
@@ -260,7 +260,7 @@ function _get_current_weather_content() {
 }
 
 function _get_topic_cover_images($topic_id) {
-    $results = db_select('managed_images', 'mi')->fields('mi')->condition('mi.topic', $topic_id)->condition('mi.is_cover', 1)->execute()->fetchObject();
+    $results = db_select('managed_images', 'mi')->fields('mi')->condition('mi.topic', $topic_id)->execute()->fetchObject();
     return $results;
 }
 

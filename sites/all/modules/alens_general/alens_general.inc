@@ -27,6 +27,18 @@ function topic_page_display($topic_id) {
     return $page_content;
 }
 
+function note_page_display() {
+    $menu_items = _generate_foot_print_menu_items();
+    $item_content = _generate_foot_print_item_content();
+    $page_content = theme('note_page_view', array('menu_items' => $menu_items, 'item_content' => $item_content));
+    return $page_content;
+}
+
+function submit_contact_form($name, $email, $msg) {
+    _insert_contact($name, $email, $msg);
+    print_r("success");
+}
+
 function _generate_navi_block() {
     $theme_path = base_path() . drupal_get_path('theme', 'alens');
     $menus = _define_menu();
@@ -75,7 +87,8 @@ function _generate_works_map() {
 function _generate_footprints_map() {
     $theme_path = base_path() . drupal_get_path('theme', 'alens');
 
-    $notes_num = 4;
+    $footprints = _get_all_footprints();
+    $notes_num = count($footprints);
     $items_layout_arr = _random_line_items();
     $total_item_num = 0;
 
@@ -87,9 +100,12 @@ function _generate_footprints_map() {
                 if ($j == 3) {
                     $j = $j + 4;
                 }
-                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '">';
-                $page_content .= '<h3>题目</h3><span class="rb-temp">内容吧啦吧啦……</span>';
-                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
+                $x = $total_item_num + $i - 1;
+                $footprint = $footprints[$x];
+                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '" target="_blank" href="note/#item' . $footprint->id . '">';
+                $str_length = _calculate_text_length($items_layout_arr[$i - 1]);
+                $page_content .= '<h3>' . strip_tags($footprint->title) . '</h3><span class="rb-temp">' . _parse_footprint_body_string($footprint->body, $str_length) . '</span>';
+//                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
                 $page_content .= '</li>';
             }
             $total_item_num = $total_item_num + count($items_layout_arr);
@@ -100,13 +116,20 @@ function _generate_footprints_map() {
             }
             for ($i = 1; $i <= count($items_layout_arr); $i++) {
                 $j = $total_item_num + $i;
+                if ($j == 3) {
+                    $j = $j + 4;
+                }
+                $x = $total_item_num + $i - 1;
+                $footprint = $footprints[$x];
                 $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '">';
-                $page_content .= '<h3>题目</h3><span class="rb-temp">内容吧啦吧啦……</span>';
-                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
+                $str_length = _calculate_text_length($items_layout_arr[$i - 1]);
+                $page_content .= '<h3>' . strip_tags($footprint->title) . '</h3><span class="rb-temp">' . _parse_footprint_body_string($footprint->body, $str_length) . '</span>';
+//                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
                 $page_content .= '</li>';
             }
             $total_item_num = $total_item_num + count($items_layout_arr);
         }
+        $x++;
     }
 
     return $page_content;
@@ -169,7 +192,7 @@ function _generate_topic_cover_image($theme_path) {
         $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="rollover" />';
         $page_content .= '</a>';
         $page_content .= '<div class="item_info">';
-        $page_content .= '<h3><a target="_blank" href="./topic/' . $topic->id . '" class=""><span class="next-bg-' . $i . '">'.$topic->name.'</span></a></h3>';
+        $page_content .= '<h3><a target="_blank" href="./topic/' . $topic->id . '" class=""><span class="next-bg-' . $i . '">' . $topic->name . '</span></a></h3>';
         $page_content .= '<p><span>image slider</span></p>';
         $page_content .= '</div>';
         $page_content .= '</li>';
@@ -189,7 +212,6 @@ function _get_topic_cover_images($topic_id) {
     }
 }
 
-
 function _generate_photo_images_content($topic_id) {
     $page_content = '';
     $images = _get_topic_images($topic_id);
@@ -201,7 +223,7 @@ function _generate_photo_images_content($topic_id) {
     return $page_content;
 }
 
-function _generate_topic_images_content($topic_id){
+function _generate_topic_images_content($topic_id) {
     $page_content = '';
     $images = _get_topic_images($topic_id);
     foreach ($images as $key => $image) {
@@ -213,6 +235,75 @@ function _generate_topic_images_content($topic_id){
 function _get_topic_images($topic_id) {
     $results = db_select('managed_images', 'mi')->fields('mi')->condition('mi.topic', $topic_id)->execute()->fetchAll();
     return $results;
+}
+
+function _get_all_footprints() {
+    $query = db_select('footprints', 'fp');
+    $query->fields('fp');
+    $query->orderBy('fp.id');
+    $result = $query->execute()->fetchAll();
+    return $result;
+}
+
+function _parse_footprint_body_string($original_str, $str_length) {
+    $original_str = strip_tags($original_str);
+    $shorted_str = mb_substr($original_str, 0, $str_length);
+    return $shorted_str . '... ...';
+}
+
+function _calculate_text_length($class_str) {
+    $str_length = 0;
+    if ($class_str == 'rb-span-2') {
+        $str_length = 120;
+    } else if ($class_str == 'rb-span-4') {
+        $str_length = 240;
+    } else {
+        $str_length = 50;
+    }
+    return $str_length;
+}
+
+function _insert_contact($name, $email, $msg) {
+    $query = db_insert('contact')
+            ->fields(array(
+                'name' => $name,
+                'email' => $email,
+                'body' => $msg
+            ))
+            ->execute();
+}
+
+function _generate_foot_print_menu_items() {
+    $page_content = '';
+    $footprints = _get_all_footprints();
+    foreach ($footprints as $key => $footprint) {
+        if ($key == 0) {
+            $page_content .= '<li class="menu-toc-current"><a href="#item' . $footprint->id . '">' . $footprint->title . '</a></li>';
+        } else {
+            $page_content .= '<li><a href="#item' . $footprint->id . '">' . $footprint->title . '</a></li>';
+        }
+    }
+    return $page_content;
+}
+
+function _generate_foot_print_item_content() {
+    $page_content = '';
+    $footprints = _get_all_footprints();
+    foreach ($footprints as $key => $footprint) {
+        $page_content .= '<div class="bb-item" id="item' . $footprint->id . '">';
+        $page_content .= '<div class="content">';
+        $page_content .= '<div class="scroller">';
+        $page_content .= '<div style="margin-top: 10px; margin-left: 98px; font-size: 28px; font-weight: 600;">';
+        $page_content .= $footprint->title;
+        $page_content .= '</div>';
+        $page_content .= '<div style="margin-top: 20px; font-size: 12px; font-family: Microsoft YaHei">';
+        $page_content .= $footprint->body;
+        $page_content .= '</div>';
+        $page_content .= '</div>';
+        $page_content .= '</div>';
+        $page_content .= '</div>';
+    }
+    return $page_content;
 }
 
 ?>

@@ -37,6 +37,24 @@ function alens_general_menu() {
         'file' => 'alens_general.inc',
     );
     
+    $items['note'] = array(
+        'title' => 'note page',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'note_page_display',
+        'page arguments' => array(),
+        'access callback' => TRUE,
+        'file' => 'alens_general.inc',
+    );
+    
+    $items['submitform/%/%/%'] = array(
+        'title' => 'submit contact form',
+        'type' => MENU_CALLBACK,
+        'page callback' => 'submit_contact_form',
+        'page arguments' => array(1, 2, 3),
+        'access callback' => TRUE,
+        'file' => 'alens_general.inc',
+    );
+    
     return $items;
 }
 
@@ -56,6 +74,10 @@ function alens_general_theme() {
     $themes['topic_page_view'] = array(
         'path' => drupal_get_path('module', 'alens_general') . '/templates',
         'template' => 'topic_page_view',
+    );
+    $themes['note_page_view'] = array(
+        'path' => drupal_get_path('module', 'alens_general') . '/templates',
+        'template' => 'note_page_view',
     );
     return $themes;
 }

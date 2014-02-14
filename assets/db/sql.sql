@@ -29,10 +29,19 @@ CREATE TABLE `topics` (
 --     PRIMARY KEY (`id`)
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/* Create TABLE image_wall_images */
+/* Create TABLE footprints */
 CREATE TABLE `footprints` (
     `id` int(11) unsigned NOT NULL,
     `title` varchar(255) DEFAULT NULL,
+    `body` LONGTEXT DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/* Create TABLE contact */
+CREATE TABLE `contact` (
+    `id` int(11) unsigned NOT NULL,
+    `name` varchar(40) DEFAULT NULL,
+    `email` varchar(80) DEFAULT NULL,
     `body` LONGTEXT DEFAULT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

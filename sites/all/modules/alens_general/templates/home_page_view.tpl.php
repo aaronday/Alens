@@ -149,9 +149,9 @@
                             <a class="tile-nav scroll-link" href="#works" data-soffset="0">
                                 <div class="nav-hover next-bg-four">
                                     <h5>Take photos around the world</h5>
-                                    <p>To record, make me see more</p>
+                                    <p>To record, to see more</p>
                                 </div>
-                                <span>Record</span>
+                                <span>Photography</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/02.png"/>
                             </a>
                         </div>
@@ -213,7 +213,7 @@
                         
                         <!-- Tile : Starts -->
                         <div class="tile nav-tile tile-01 next-bg-six">
-                            <a class="tile-nav scroll-link" href="single-project.html" data-soffset="0">
+                            <a class="tile-nav scroll-link" href="" data-soffset="0">
                                 <div class="nav-hover next-bg-eight">
                                     <h5>My favorite compositions</h5>
                                     <p></p>
@@ -247,7 +247,7 @@
                             <a class="tile-nav scroll-link" href="#contact" data-soffset="0">
                                 <div class="nav-hover next-bg-one">
                                     <h5>Wanna be my friend?</h5>
-                                    <p>Just send me the email without hesitation!</p>
+                                    <p>Just send me your email without hesitation!</p>
                                 </div>
                                 <span>Contact me</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/05.png"/>
@@ -505,31 +505,35 @@
 
                             <div class="row">
                                 <article class="col-md-12 text-center">
-                                    <div id="fname"  class="alert alert-error error">
+                                    <div id="fname"  class="alert alert-error" style="display: none;">
                                         Name must not be empty
                                     </div>
-                                    <div id="fmail" class="alert alert-error  error">
+                                    <div id="fmail" class="alert alert-error " style="display: none;">
                                         Please provide a valid email
                                     </div>
-                                    <div id="fmsg" class="alert alert-error  error">
+                                    <div id="fmsg" class="alert alert-error " style="display: none;">
                                         Message should not be empty
+                                    </div>
+                                    <div id="successmsg" class="alert alert-msg " style="display: none;">
+                                        Your information has been submitted successfully!
                                     </div>
                                 </article>
                             </div>
 
-                            <form name="myform" id="contactForm" action="sendcontact.php" enctype="multipart/form-data" method="post"> 
+                            <form name="myform" id="contactForm" action="" enctype="multipart/form-data" method="post"> 
                                 <div class="row add-top-small">
                                     <article class="col-md-6">
-                                        <input size="100" type="text" name="name" id="name" placeholder="Name">
+                                        <input size="100" type="text" name="name" id="name" placeholder="Name" onClick="warningClearUp()">
                                     </article>
                                     <article class="col-md-6">
-                                        <input type="text"  size="30" id="email" name="email" placeholder="email">
+                                        <input type="text"  size="30" id="email" name="email" placeholder="email" onClick="warningClearUp()">
                                     </article>
                                 </div>
                                 <div class="row add-top-small">
                                     <article class="col-md-12">
-                                        <textarea  id="msg" rows="3" cols="40" name="message" placeholder="Message"></textarea>
-                                        <button type="submit" name="submit" id="submit" class="btn btn-next add-top-half">Send Message</button>
+                                        <textarea  id="msg" rows="3" cols="40" name="message" placeholder="Message" onClick="warningClearUp()"></textarea>
+                                        <button type="button" name="submit" id="submit" class="btn btn-next add-top-half" onClick="submitForm()" style="float: left; ">Send Message</button>
+                                        <img id="ajax-loader" alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/ajax-loader.gif" style="float: left;  margin-left: 10px; margin-top: 20px; display: none;"/>
                                     </article>
                                 </div>
                             </form>
@@ -617,8 +621,8 @@
 
                     <div class="row foot-border">
                         <article class="col-md-12 credits text-center">
-                            <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/foot-logo.png"/>
-                            <h3>Built by Designova</h3>
+                            <!--<img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/foot-logo.png"/>-->
+                            <h3 style="font-family: YueGo_EL;">纯属学习娱乐，设计版权归Designnova所有</h3>
                         </article>
 
                     </div>
@@ -651,7 +655,7 @@
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/waypoints.min.js"></script>
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/jquery.tweet.js"></script>
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/portfolio.js"></script>
-        <script src="<?php echo $theme_path; ?>/home_src/javascripts/form-validation.js"></script>
+        <!--<script src="<?php echo $theme_path; ?>/home_src/javascripts/form-validation.js"></script>-->
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/responsive-nav.js"></script>
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/jquery.easy-pie-chart.js"></script>
         <script src="<?php echo $theme_path; ?>/home_src/javascripts/jquery.cbpQTRotator.js"></script>
@@ -708,6 +712,67 @@
                 $('#cbp-qtrotator').cbpQTRotator();
             });
         </script>
-
+        <script>
+            function warningClearUp(){
+                $('#fname').css('display', 'none');
+                $('#fmail').css('display', 'none');
+                $('#fmsg').css('display', 'none');
+            }
+            function submitForm(){
+                var name = $('#name').val();
+                var mail = $('#email').val();
+                var msg = $('#msg').val();
+                
+                var passValid = validInputValue(name, mail, msg);
+                
+                if(passValid){
+                    $('#ajax-loader').css('display', 'block');
+                    
+                    $.ajax({
+                        type: 'post',
+                        url: '/alens/submitform/'+name +'/'+mail +'/'+msg,
+                        data: {},
+                        success: function(msg){
+                            if(msg == 'success'){
+                                $('#successmsg').fadeIn('slow');
+                                $('#ajax-loader').css('display', 'none');
+                                $('#successmsg').fadeOut(5000);
+                            }
+                        },
+                        error: function(){
+                            alert('fail');
+                        }
+                    })
+                }
+                
+            }
+            
+            function isValidEmailAddress(emailAddress) {
+                var pattern = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
+                return pattern.test(emailAddress);
+            };
+            
+            function validInputValue(name, email, msg){
+                if(name == ""){
+                        $('#fname').fadeIn('slow');
+                        $("input#name").focus();
+                        return false;
+                }
+                if(email == ""){
+                    $('#fmail').fadeIn('slow');
+                    $("input#email").focus();
+                    return false;
+                }
+                if (email !== "") {  
+                    if (!isValidEmailAddress(email)) {
+                            $('#fmail').fadeIn('slow'); //error message
+                            $("input#email").focus();   //focus on email field
+                            return false;  
+                    }
+                } 
+                return true;
+            }
+         
+         </script>
     </body>
 </html>
