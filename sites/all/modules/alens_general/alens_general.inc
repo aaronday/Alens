@@ -27,10 +27,9 @@ function topic_page_display($topic_id) {
     return $page_content;
 }
 
-function note_page_display() {
-    $menu_items = _generate_foot_print_menu_items();
-    $item_content = _generate_foot_print_item_content();
-    $page_content = theme('note_page_view', array('menu_items' => $menu_items, 'item_content' => $item_content));
+function note_page_display($note_id) {
+    $item_content = _generate_foot_print_item_content($note_id);
+    $page_content = theme('note_page_view', array('item_content' => $item_content));
     return $page_content;
 }
 
@@ -102,7 +101,7 @@ function _generate_footprints_map() {
                 }
                 $x = $total_item_num + $i - 1;
                 $footprint = $footprints[$x];
-                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '" target="_blank" href="note/#item' . $footprint->id . '">';
+                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '" onClick="openNote(' . $footprint->id . ')">';
                 $str_length = _calculate_text_length($items_layout_arr[$i - 1]);
                 $page_content .= '<h3>' . strip_tags($footprint->title) . '</h3><span class="rb-temp">' . _parse_footprint_body_string($footprint->body, $str_length) . '</span>';
 //                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
@@ -121,7 +120,7 @@ function _generate_footprints_map() {
                 }
                 $x = $total_item_num + $i - 1;
                 $footprint = $footprints[$x];
-                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '">';
+                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . 'next-bg-' . $j . '" target="_blank" href="note/' . $footprint->id . '">';
                 $str_length = _calculate_text_length($items_layout_arr[$i - 1]);
                 $page_content .= '<h3>' . strip_tags($footprint->title) . '</h3><span class="rb-temp">' . _parse_footprint_body_string($footprint->body, $str_length) . '</span>';
 //                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
@@ -245,6 +244,15 @@ function _get_all_footprints() {
     return $result;
 }
 
+function _get_footprints_by_id($note_id) {
+    $query = db_select('footprints', 'fp');
+    $query->fields('fp');
+    $query->condition('fp.id', $note_id);
+    $query->orderBy('fp.id');
+    $result = $query->execute()->fetchObject();
+    return $result;
+}
+
 function _parse_footprint_body_string($original_str, $str_length) {
     $original_str = strip_tags($original_str);
     $shorted_str = mb_substr($original_str, 0, $str_length);
@@ -273,34 +281,30 @@ function _insert_contact($name, $email, $msg) {
             ->execute();
 }
 
-function _generate_foot_print_menu_items() {
+function _generate_foot_print_item_content($note_id) {
     $page_content = '';
-    $footprints = _get_all_footprints();
-    foreach ($footprints as $key => $footprint) {
-        if ($key == 0) {
-            $page_content .= '<li class="menu-toc-current"><a href="#item' . $footprint->id . '">' . $footprint->title . '</a></li>';
-        } else {
-            $page_content .= '<li><a href="#item' . $footprint->id . '">' . $footprint->title . '</a></li>';
+    $note = _get_footprints_by_id($note_id);
+    $body = $note->body;
+    $contents = split('</p><p>', $body);
+    $page_content .= '<div class="bb-item">';
+    $page_content .= '<div class="bb-custom-firstpage">';
+    $page_content .= '<p>' . $note->title . '</p>';
+    $page_content .= '</div>';
+    $page_content .= '<div class="bb-custom-side">';
+    $page_content .= '<p>' . strip_tags($contents[0]) . '</p>';
+    $page_content .= '</div>';
+    $page_content .= '</div>';
+    $key = 1;
+    while ($key < count($contents)) {
+        $page_content .= '<div class="bb-item">';
+        for ($i = 0; $i < 2; $i++) {
+            if (trim(strip_tags($contents[$key])) != '') {
+                $page_content .= '<div class="bb-custom-side">';
+                $page_content .= '<p>' . strip_tags($contents[$key]) . '</p>';
+                $page_content .= '</div>';
+            }
+            $key++;
         }
-    }
-    return $page_content;
-}
-
-function _generate_foot_print_item_content() {
-    $page_content = '';
-    $footprints = _get_all_footprints();
-    foreach ($footprints as $key => $footprint) {
-        $page_content .= '<div class="bb-item" id="item' . $footprint->id . '">';
-        $page_content .= '<div class="content">';
-        $page_content .= '<div class="scroller">';
-        $page_content .= '<div style="margin-top: 10px; margin-left: 98px; font-size: 28px; font-weight: 600;">';
-        $page_content .= $footprint->title;
-        $page_content .= '</div>';
-        $page_content .= '<div style="margin-top: 20px; font-size: 12px; font-family: Microsoft YaHei">';
-        $page_content .= $footprint->body;
-        $page_content .= '</div>';
-        $page_content .= '</div>';
-        $page_content .= '</div>';
         $page_content .= '</div>';
     }
     return $page_content;

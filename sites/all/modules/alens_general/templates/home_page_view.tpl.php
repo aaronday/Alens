@@ -774,5 +774,10 @@
             }
          
          </script>
+         <script>
+             function openNote(noteId){
+                 window.open('/alens/note/'+noteId);
+             }
+         </script>
     </body>
 </html>

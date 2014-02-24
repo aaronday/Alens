@@ -37,11 +37,11 @@ function alens_general_menu() {
         'file' => 'alens_general.inc',
     );
     
-    $items['note'] = array(
+    $items['note/%'] = array(
         'title' => 'note page',
         'type' => MENU_CALLBACK,
         'page callback' => 'note_page_display',
-        'page arguments' => array(),
+        'page arguments' => array(1),
         'access callback' => TRUE,
         'file' => 'alens_general.inc',
     );

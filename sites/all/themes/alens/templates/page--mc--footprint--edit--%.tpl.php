@@ -22,7 +22,8 @@
                     url: '/alens/mc/savefootprint'+'/'+footprintid,
                     data: {title: title, body: body},
                     success: function(msg){
-                        window.location.href='/alens/travel#item'+msg;
+                        //window.location.href='/alens/travel#item'+msg;
+                        alert('success!');
                     },
                     error: function(){
                         alert('fail');
