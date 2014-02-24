@@ -102,21 +102,21 @@ class UploadHandler {
             'image_versions' => array(
                 // Uncomment the following version to restrict the size of
                 // uploaded images:
-                /*
+                
                   '' => array(
                   'max_width' => 1920,
                   'max_height' => 1200,
                   'jpeg_quality' => 95
                   ),
-                 */
+                 
                 // Uncomment the following to create medium sized images:
-                /*
+                
                   'medium' => array(
                   'max_width' => 800,
                   'max_height' => 600,
                   'jpeg_quality' => 80
                   ),
-                 */
+                 
                 'thumbnail' => array(
                     // Uncomment the following to use a defined directory for the thumbnails
                     // instead of a subdirectory based on the version identifier.
