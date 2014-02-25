@@ -46,7 +46,12 @@ function _generate_navi_block() {
     for ($i = 0; $i < count($menus); $i++) {
         $x = $i + 1;
         $page_content .= '<li class="next-bg-' . $x . '">';
-        $page_content .= '<a class="scroll-link" id="' . $menus[$i] . '-link" href="#' . $menus[$i] . '" data-soffset="0">';
+        if($menus[$i] != 'photos'){
+            $section_name = $menus[$i];
+        }else{
+            $section_name = 'works';
+        }
+        $page_content .= '<a class="scroll-link" id="' . $section_name . '-link" href="#' . $section_name . '" data-soffset="0">';
         $page_content .= '<div class="first">';
         $page_content .= '<div class="arrow-right"></div>';
         $page_content .= '<div class="content"><img alt="" title="" src="' . $theme_path . '/home_src/images/icons/0' . $i . '.png"/></div>';

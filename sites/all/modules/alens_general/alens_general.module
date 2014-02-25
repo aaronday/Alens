@@ -83,7 +83,7 @@ function alens_general_theme() {
 }
 
 function _define_menu() {
-    $menu_arr = array('home', 'about', 'works', 'footprints', 'contact');
+    $menu_arr = array('home', 'about', 'photos', 'footprints', 'contact');
     return $menu_arr;
 }
 

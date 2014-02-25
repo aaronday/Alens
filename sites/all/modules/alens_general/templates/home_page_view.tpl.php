@@ -74,7 +74,7 @@
                 <i class="icon-remove menu-close"></i>
                 <a class="scroll-link"  data-soffset="0" href="#intro">Home</a>
                 <a class="scroll-link"  data-soffset="0" href="#about">About</a>
-                <a class="scroll-link"  data-soffset="0" href="#works">Works</a>
+                <a class="scroll-link"  data-soffset="0" href="#works">Photos</a>
                 <a class="scroll-link"  data-soffset="0" href="#footprints">Footprints</a>
                 <a class="scroll-link"  data-soffset="0" href="#contact">Contact</a>
             </div>
@@ -404,7 +404,7 @@
                     </div>
                     -->
 
-                    <div class="row">
+                    <div class="row" style="width: 990px;">
                         <section id="portfolio-wrap" class="clearfix">
 
                             <!-- Thumbnails -->
@@ -622,7 +622,7 @@
                     <div class="row foot-border">
                         <article class="col-md-12 credits text-center">
                             <!--<img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/foot-logo.png"/>-->
-                            <h3 style="font-family: YueGo_EL;">纯属学习娱乐，设计版权归Designnova所有</h3>
+                            <h3 style="font-family: YueGo_EL;">纯属学习娱乐，设计版权归他人所有</h3>
                         </article>
 
                     </div>
