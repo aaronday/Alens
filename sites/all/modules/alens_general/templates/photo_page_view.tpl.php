@@ -31,7 +31,7 @@
         <![endif]-->
     </head>
 
-    <body>
+    <body style="background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);">
 
         <div class="reveal">
 

@@ -191,7 +191,7 @@ function _generate_topic_cover_image($theme_path) {
         $image = _get_topic_cover_images($topic->id);
         $i = $key + 1;
         $page_content .= '<li data-type="category' . $i . '" class="simple-bg-one">';
-        $page_content .= '<a target="_blank" href="./topic/' . $topic->id . '" class="">';
+        $page_content .= '<a target="_blank" href="./photos/' . $topic->id . '" class="">';
         $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="origin"/>';
         $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="rollover" />';
         $page_content .= '</a>';
