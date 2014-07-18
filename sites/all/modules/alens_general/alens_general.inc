@@ -196,7 +196,7 @@ function _generate_topic_cover_image($theme_path) {
         $page_content .= '<img alt="" title="simple" src="' . $image->url . '" class="rollover" />';
         $page_content .= '</a>';
         $page_content .= '<div class="item_info">';
-        $page_content .= '<h3><a target="_blank" href="./topic/' . $topic->id . '" class=""><span class="next-bg-' . $i . '">' . $topic->name . '</span></a></h3>';
+        $page_content .= '<h3><a target="_blank" href="./photos/' . $topic->id . '" class=""><span class="next-bg-' . $i . '">' . $topic->name . '</span></a></h3>';
         $page_content .= '<p><span>image slider</span></p>';
         $page_content .= '</div>';
         $page_content .= '</li>';
@@ -296,7 +296,7 @@ function _generate_foot_print_item_content($note_id) {
     $page_content .= '<p>' . $note->title . '</p>';
     $page_content .= '</div>';
     $page_content .= '<div class="bb-custom-side">';
-    $page_content .= '<p>' . strip_tags($contents[0]) . '</p>';
+    $page_content .= '<p style="line-height: 30px;">' . strip_tags($contents[0]) . '</p>';
     $page_content .= '</div>';
     $page_content .= '</div>';
     $key = 1;
@@ -305,7 +305,7 @@ function _generate_foot_print_item_content($note_id) {
         for ($i = 0; $i < 2; $i++) {
             if (trim(strip_tags($contents[$key])) != '') {
                 $page_content .= '<div class="bb-custom-side">';
-                $page_content .= '<p>' . strip_tags($contents[$key]) . '</p>';
+                $page_content .= '<p style="line-height: 30px;">' . strip_tags($contents[$key]) . '</p>';
                 $page_content .= '</div>';
             }
             $key++;

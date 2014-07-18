@@ -770,6 +770,12 @@
                             return false;  
                     }
                 } 
+                if ( msg == "") {  
+                    $('#fmsg').fadeIn('slow');
+                    $("input#msg").focus();
+                    return false;
+                }
+               
                 return true;
             }
          

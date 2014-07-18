@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href="/alens/<?php echo drupal_get_path('theme', 'alens') ?>/mc_src/css/style.css">
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="/alens/<?php echo drupal_get_path('theme', 'alens') ?>/mc_src/js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="/alens/<?php echo drupal_get_path('theme', 'alens') ?>/mc_src/js/mc.js"></script>
     </head>
     <body style="background-color:  white; background-image:  none; width: 100%; height: 100%;">
