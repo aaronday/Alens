@@ -506,7 +506,7 @@
                             <div class="row">
                                 <article class="col-md-12 text-center">
                                     <div id="fname"  class="alert alert-error" style="display: none;">
-                                        Name must not be empty
+                                        Name cannot be empty
                                     </div>
                                     <div id="fmail" class="alert alert-error " style="display: none;">
                                         Please provide a valid email
