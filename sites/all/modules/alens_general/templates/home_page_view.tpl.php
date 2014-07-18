@@ -304,8 +304,8 @@
                             <ul class="be-social">
                                 <li><a target="_blank" href="http://weibo.com/aaronlovequeena"><span class="next-bg-eight be-social-chinese">微博求关注</span></a></li>
                                 <li><a target="_blank" href="http://www.douban.com/people/44938761/"><span class="next-bg-two be-social-chinese">来豆瓣找我吧</span></a></li>
-                                <li><a target="_blank" href="javascript: alert('你能上么？');"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
-                                <li><a target="_blank" href="javascript: alert('你能上么？');"><span class="next-bg-four">Connect me via Facebook</span></a></li>
+                                <li><a target="_blank" href="javascript: alert('你能上么，亲？');"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
+                                <li><a target="_blank" href="javascript: alert('党不让我们上，我们就要听话。');"><span class="next-bg-four">Connect me via Facebook</span></a></li>
                             </ul>
                         </article>
                     </div>
