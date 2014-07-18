@@ -37,7 +37,7 @@ class UploadHandler {
     protected $db_info = array(
         'db_host' => 'localhost',
         'db_user' => 'root',
-        'db_pass' => 'root',
+        'db_pass' => '',
         'db_name' => 'alens',
         'db_table' => 'managed_images',
     );

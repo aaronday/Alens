@@ -70,5 +70,6 @@ src: url('fonts/YueGo/RTWSYueGoTrial-UltLightCond.otf');
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+  src: local('Lato Light'), local('Lato-Light'), url('fonts/lato/KT3KS9Aol4WfR6Vas8kNcg.woff') format('woff');
 }
+/*url(http://themes.googleusercontent.com/static/fonts/lato/v7/KT3KS9Aol4WfR6Vas8kNcg.woff) */

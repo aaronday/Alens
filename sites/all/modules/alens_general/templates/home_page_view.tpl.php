@@ -247,7 +247,7 @@
                             <a class="tile-nav scroll-link" href="#contact" data-soffset="0">
                                 <div class="nav-hover next-bg-one">
                                     <h5>Wanna be my friend?</h5>
-                                    <p>Just send me your email without hesitation!</p>
+                                    <p>Feel free to send me the email!</p>
                                 </div>
                                 <span>Contact me</span>
                                 <img alt="" title="" src="<?php echo $theme_path; ?>/home_src/images/icons/05.png"/>
@@ -302,10 +302,10 @@
                         </article>
                         <article class="col-md-7 col-xs-6 mob-hor-full text-left">
                             <ul class="be-social">
-                                <li><a href="#"><span class="next-bg-eight be-social-chinese">微博求关注</span></a></li>
-                                <li><a href="#"><span class="next-bg-two be-social-chinese">来豆瓣找我吧</span></a></li>
-                                <li><a href="#"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
-                                <li><a href="#"><span class="next-bg-four">Connect me via Facebook</span></a></li>
+                                <li><a target="_blank" href="http://weibo.com/aaronlovequeena"><span class="next-bg-eight be-social-chinese">微博求关注</span></a></li>
+                                <li><a target="_blank" href="http://www.douban.com/people/44938761/"><span class="next-bg-two be-social-chinese">来豆瓣找我吧</span></a></li>
+                                <li><a target="_blank" href="javascript: alert('你能上么？');"><span class="next-bg-three">Follow my tweets on Twitter</span></a></li>
+                                <li><a target="_blank" href="javascript: alert('你能上么？');"><span class="next-bg-four">Connect me via Facebook</span></a></li>
                             </ul>
                         </article>
                     </div>

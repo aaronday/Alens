@@ -125,7 +125,7 @@ function _generate_footprints_map() {
                 }
                 $x = $total_item_num + $i - 1;
                 $footprint = $footprints[$x];
-                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . 'next-bg-' . $j . '" target="_blank" href="note/' . $footprint->id . '">';
+                $page_content .= '<li class="' . $items_layout_arr[$i - 1] . ' next-bg-' . $j . '" onClick="openNote(' . $footprint->id . ')">';
                 $str_length = _calculate_text_length($items_layout_arr[$i - 1]);
                 $page_content .= '<h3>' . strip_tags($footprint->title) . '</h3><span class="rb-temp">' . _parse_footprint_body_string($footprint->body, $str_length) . '</span>';
 //                $page_content .= '<img alt="" title="" class="service-thumb" src="' . $theme_path . '/home_src/images/services/01.png"/>';
