@@ -46,11 +46,11 @@ function alens_general_menu() {
         'file' => 'alens_general.inc',
     );
     
-    $items['submitform/%/%/%'] = array(
+    $items['submitform'] = array(
         'title' => 'submit contact form',
         'type' => MENU_CALLBACK,
         'page callback' => 'submit_contact_form',
-        'page arguments' => array(1, 2, 3),
+        'page arguments' => array(),
         'access callback' => TRUE,
         'file' => 'alens_general.inc',
     );

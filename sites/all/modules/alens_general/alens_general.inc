@@ -33,7 +33,10 @@ function note_page_display($note_id) {
     return $page_content;
 }
 
-function submit_contact_form($name, $email, $msg) {
+function submit_contact_form() {
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $msg=$_POST['msg'];
     _insert_contact($name, $email, $msg);
     print_r("success");
 }

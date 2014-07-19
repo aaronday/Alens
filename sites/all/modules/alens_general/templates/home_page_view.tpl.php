@@ -730,8 +730,8 @@
                     
                     $.ajax({
                         type: 'post',
-                        url: '/alens/submitform/'+name +'/'+mail +'/'+msg,
-                        data: {},
+                        url: '/alens/submitform/',
+                        data: {name:name, email:mail, msg:msg},
                         success: function(msg){
                             if(msg == 'success'){
                                 $('#successmsg').fadeIn('slow');
